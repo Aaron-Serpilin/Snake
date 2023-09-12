@@ -1,0 +1,16 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "/usr/local/bin/scala-cli",
+    "bsp",
+    "--json-options",
+    "/Users/aaronserpilin/Documents/VU/Second-Year/First-Period/Object-Oriented-Functional-Programming/Scala-Assignments/Snake/src/snake/logic/.scala-build/ide-options-v2.json",
+    "/Users/aaronserpilin/Documents/VU/Second-Year/First-Period/Object-Oriented-Functional-Programming/Scala-Assignments/Snake/src/snake/logic/GameLogic.scala"
+  ],
+  "version": "1.0.4",
+  "bspVersion": "2.1.0-M5",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}
