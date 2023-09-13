@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class snake.basic.FullGameTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class snake.basic.FullGameTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/snake.basic.html">snake.basic</a> &gt; FullGameTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">7</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">7</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.140s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testGame10x7"></a>
+<h3 class="failures">testGame10x7</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: The game should work at any board size which can hold the initial snake. In this case 10x7.
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=2, actions=&lt;&gt;
+Want       | Got ✗     
+-----------------------
+OO&gt;..A.... | OO&gt;.......
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=1, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.OO&gt;.A.... | .OO&gt;......
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=2, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..OO&gt;A.... | ..OO&gt;.....
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=3, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..AOO&gt;.... | ...OO&gt;....
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=4, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..AOOO&gt;... | ....OO&gt;...
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=5, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..AOOOO&gt;.. | .....OO&gt;..
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=6, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..AOOOOO&gt;. | ......OO&gt;.
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=7, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A.OOOOO&gt; | .......OO&gt;
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=8, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+&gt;.A..OOOOO | &gt;.......OO
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=9, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+O&gt;A...OOOO | O&gt;.......O
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=10, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OO&gt;..A.OOO | OO&gt;.......
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=11, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OOO&gt;.A.OOO | .OO&gt;......
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=12, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOO&gt;A.OOO | ..OO&gt;.....
+.......... | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=13, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOOO&gt;.OOO | ...OO&gt;....
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=14, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOOOO&gt;OOO | ....OO&gt;...
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+.......... | ..........
+
+step=15, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOOOOOOOO | .....OO...
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+.......... | ..........
+......^... | ......^...
+
+step=16, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOOOOOOOO | ......O...
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+......^... | ......^...
+......O... | ......O...
+
+step=17, rand=2, actions=&lt;ChangeDir(East()), Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOOOOO.OO | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+......O&gt;.. | ......O&gt;..
+......O... | ......O...
+
+step=18, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOOOOO..O | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+......OO&gt;. | ......OO&gt;.
+......O... | ..........
+
+step=19, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+OOOOOOO... | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+......OOO&gt; | .......OO&gt;
+......O... | ..........
+
+step=20, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.OOOOOO... | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+&gt;.....OOOO | &gt;.......OO
+......O... | ..........
+
+step=21, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..OOOOO... | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+O&gt;....OOOO | O&gt;.......O
+......O... | ..........
+
+step=22, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+...OOOO... | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+OO&gt;...OOOO | OO&gt;.......
+......O... | ..........
+
+step=23, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+....OOO... | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+OOO&gt;..OOOO | .OO&gt;......
+......O... | ..........
+
+step=24, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.....OO... | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+.......... | ..........
+OOOO&gt;.OOOO | ..OO&gt;.....
+......O... | ..........
+
+step=25, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
+Want       | Got ✗     
+-----------------------
+......O... | ..........
+.A........ | ..........
+.......... | ..A.......
+.......... | ..........
+....^..... | ....^.....
+OOOOO.OOOO | ...OO.....
+......O... | ..........
+
+step=26, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.......... | ..........
+.A........ | ..........
+.......... | ..A.......
+....^..... | ....^.....
+....O..... | ....O.....
+OOOOO.OOOO | ....O.....
+......O... | ..........
+
+step=27, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.......... | ..........
+.A........ | ..........
+....^..... | ..A.^.....
+....O..... | ....O.....
+....O..... | ....O.....
+OOOOO.OOOO | ..........
+.......... | ..........
+
+step=28, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.......... | ..........
+.A..^..... | ....^.....
+....O..... | ..A.O.....
+....O..... | ....O.....
+....O..... | ..........
+OOOOO..OOO | ..........
+.......... | ..........
+
+step=29, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
+Want       | Got ✗     
+-----------------------
+.......... | ..........
+.A.&lt;O..... | ...&lt;O.....
+....O..... | ..A.O.....
+....O..... | ..........
+....O..... | ..........
+OOOOO...OO | ..........
+.......... | ..........
+
+step=30, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.......... | ..........
+.A&lt;OO..... | ..&lt;OO.....
+....O..... | ..A.......
+....O..... | ..........
+....O..... | ..........
+OOOOO....O | ..........
+.......... | ..........
+
+step=31, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+.&lt;OOO..... | .&lt;OO......
+....O..... | ..A.......
+....O..... | ..........
+....O..... | ..........
+OOOOO..... | ..........
+.......... | ..........
+
+step=32, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+&lt;OOOO..... | &lt;OO.......
+....O..... | ..A.......
+....O..... | ..........
+....O..... | ..........
+OOOOO..... | ..........
+.......... | ..........
+
+step=33, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+OOOOO....&lt; | OO.......&lt;
+....O..... | ..A.......
+....O..... | ..........
+....O..... | ..........
+OOOOO..... | ..........
+.......... | ..........
+
+step=34, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+OOOOO...&lt;O | O.......&lt;O
+....O..... | ..A.......
+....O..... | ..........
+....O..... | ..........
+OOOOO..... | ..........
+.......... | ..........
+
+step=35, rand=2, actions=&lt;ChangeDir(South()), Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+OOOOO...OO | ........OO
+....O...v. | ..A.....v.
+....O..... | ..........
+....O..... | ..........
+.OOOO..... | ..........
+.......... | ..........
+
+step=36, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+OOOOO...OO | ........O.
+....O...O. | ..A.....O.
+....O...v. | ........v.
+....O..... | ..........
+..OOO..... | ..........
+.......... | ..........
+
+step=37, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+OOOOO...OO | ..........
+....O...O. | ..A.....O.
+....O...O. | ........O.
+....O...v. | ........v.
+...OO..... | ..........
+.......... | ..........
+
+step=38, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+OOOOO...OO | ..........
+....O...O. | ..A.......
+....O...O. | ........O.
+....O...O. | ........O.
+....O...v. | ........v.
+.......... | ..........
+
+step=39, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....... | ..........
+OOOOO...OO | ..........
+....O...O. | ..A.......
+....O...O. | ..........
+....O...O. | ........O.
+........O. | ........O.
+........v. | ........v.
+
+step=40, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A.....v. | ........v.
+OOOOO...OO | ..........
+....O...O. | ..A.......
+....O...O. | ..........
+........O. | ..........
+........O. | ........O.
+........O. | ........O.
+
+step=41, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
+Want       | Got ✗     
+-----------------------
+..A....&lt;O. | .......&lt;O.
+OOOOO...OO | ..........
+....O...O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+........O. | ........O.
+
+step=42, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A...&lt;OO. | ......&lt;OO.
+OOOOO...OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+........O. | ..........
+
+step=43, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A..&lt;OOO. | .....&lt;OO..
+OOOO....OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+........O. | ..........
+
+step=44, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A.&lt;OOOO. | ....&lt;OO...
+OOO.....OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+........O. | ..........
+
+step=45, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..A&lt;OOOOO. | ...&lt;OO....
+OO......OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+........O. | ..........
+
+step=46, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+..&lt;OOOOOOA | ..&lt;OO.....
+O.......OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+........O. | ..........
+
+step=47, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.&lt;OOOOOOOA | .&lt;OO......
+O.......OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+........O. | ..........
+
+step=48, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
+Want       | Got ✗     
+-----------------------
+.OOOOOOOOA | .OO.......
+O.......OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+........O. | ..........
+.^......O. | .^........
+
+step=49, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.OOOOOOOOA | .O........
+O.......OO | ..........
+........O. | ..A.......
+........O. | ..........
+........O. | ..........
+.^......O. | .^........
+.O......O. | .O........
+
+step=50, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.OOOOOOOOA | ..........
+........OO | ..........
+........O. | ..A.......
+........O. | ..........
+.^......O. | .^........
+.O......O. | .O........
+.O......O. | .O........
+
+step=51, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.OOOOOOOOA | ..........
+........O. | ..........
+........O. | ..A.......
+.^......O. | .^........
+.O......O. | .O........
+.O......O. | .O........
+.O......O. | ..........
+
+step=52, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.OOOOOOOOA | ..........
+.......... | ..........
+.^......O. | .^A.......
+.O......O. | .O........
+.O......O. | .O........
+.O......O. | ..........
+.O......O. | ..........
+
+step=53, rand=2, actions=&lt;Step&gt;
+Want       | Got ✗     
+-----------------------
+.OOOOOOOOA | ..........
+.^........ | .^........
+.O........ | .OA.......
+.O......O. | .O........
+.O......O. | ..........
+.O......O. | ..........
+.O......O. | ..........
+
+step=54, rand=2, actions=&lt;Step&gt;
+Want              | Got ✗     
+------------------------------
+GameOverDisplay() | .^........
+                  | .O........
+                  | .OA.......
+                  | ..........
+                  | ..........
+                  | ..........
+                  | ..........
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//snake.SnakeTestSuiteBase.checkGame(SnakeTestSuiteBase.scala:102)
+	at app//snake.basic.FullGameTests.$anonfun$new$4(FullGameTests.scala:749)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:333)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)
+	at app//snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testGame3x1"></a>
+<h3 class="failures">testGame3x1</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: The game should work at any board size which can hold the initial snake. In this case 3x1.
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=0, actions=&lt;&gt;
+Want | Got ✗                                                                                                                                    
+------------------------------------------------------------------------------------------------------------------------------------------------
+OO&gt;  | LogicFailed(java.lang.ArithmeticException: / by zero                                                                                     
+     | 	at generic.TestRandomGen.randomInt(TestRandomGen.scala:17)                                                                              
+     | 	at snake.logic.GameLogic.&lt;init&gt;(GameLogic.scala:13)                                                                                     
+     | 	at snake.SnakeTestSuiteBase.makeGame(SnakeTestSuiteBase.scala:69)                                                                       
+     | 	at snake.SnakeTestSuiteBase.makeGame(SnakeTestSuiteBase.scala:64)                                                                       
+     | 	at generic.GameTestSuite$TestRecording.liftedTree1$1(GameTestSuite.scala:188)                                                           
+     | 	at generic.GameTestSuite$TestRecording.implementationDisplays$lzycompute(GameTestSuite.scala:187)                                       
+     | 	at generic.GameTestSuite$TestRecording.implementationDisplays(GameTestSuite.scala:178)                                                  
+     | 	at generic.GameTestSuite$TestRecording.passes$lzycompute(GameTestSuite.scala:208)                                                       
+     | 	at generic.GameTestSuite$TestRecording.passes(GameTestSuite.scala:207)                                                                  
+     | 	at generic.GameTestSuite.checkGame(GameTestSuite.scala:290)                                                                             
+     | 	at snake.SnakeTestSuiteBase.checkGame(SnakeTestSuiteBase.scala:102)                                                                     
+     | 	at snake.basic.FullGameTests.$anonfun$new$1(FullGameTests.scala:24)                                                                     
+     | 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)                                                              
+     | 	at infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)                                                                           
+     | 	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)                                                                                
+     | 	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)                                                                               
+     | 	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)                                                                              
+     | 	at org.scalatest.Transformer.apply(Transformer.scala:22)                                                                                
+     | 	at org.scalatest.Transformer.apply(Transformer.scala:20)                                                                                
+     | 	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)                                                                     
+     | 	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)                                                                             
+     | 	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)                                                                            
+     | 	at infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)                               
+     | 	at org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)                                         
+     | 	at org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)                                                                   
+     | 	at org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)                                                              
+     | 	at org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)                                                             
+     | 	at org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)                                                             
+     | 	at org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)                                                    
+     | 	at org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)                                                   
+     | 	at infrastructure.TestBase.withFixture(TestBase.scala:9)                                                                                
+     | 	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)                                                               
+     | 	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)                                                                
+     | 	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)                                                                              
+     | 	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)                                                                           
+     | 	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)                                                                          
+     | 	at org.scalatest.FunSuite.runTest(FunSuite.scala:1560)                                                                                  
+     | 	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)                                                               
+     | 	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)                                                              
+     | 	at scala.collection.immutable.List.foreach(List.scala:333)                                                                              
+     | 	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)                                                                       
+     | 	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)                                                                         
+     | 	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)                                                                             
+     | 	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)                                                                          
+     | 	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)                                                                         
+     | 	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)                                                                                 
+     | 	at org.scalatest.Suite.run(Suite.scala:1124)                                                                                            
+     | 	at org.scalatest.Suite.run$(Suite.scala:1106)                                                                                           
+     | 	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)                                                    
+     | 	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)                                                                    
+     | 	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)                                                                                  
+     | 	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)                                                                               
+     | 	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)                                                                              
+     | 	at infrastructure.TestBase.run(TestBase.scala:26)                                                                                       
+     | 	at org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)                                                                           
+     | 	at org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)                                                                     
+     | 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)                                                                    
+     | 	at org.scalatest.Suite.runNestedSuites(Suite.scala:1232)                                                                                
+     | 	at org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)                                                                               
+     | 	at org.scalatest.Suites.runNestedSuites(Suites.scala:56)                                                                                
+     | 	at org.scalatest.Suite.run(Suite.scala:1121)                                                                                            
+     | 	at org.scalatest.Suite.run$(Suite.scala:1106)                                                                                           
+     | 	at snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)                                                                              
+     | 	at snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)                                                                                    
+     | 	at org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)                                                                        
+     | 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)                     
+     | 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)                           
+     | 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)                           
+     | 	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+     | 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)                      
+     | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)                                
+     | 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)                                                                           
+     | 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)                                                 
+     | 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)                                                 
+     | 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)                                 
+     | 	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)                  
+     | 	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)                                                                       
+     | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)                                                   
+     | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)                            
+     | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)                                                 
+     | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)                                                  
+     | 	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)                                
+     | 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)        
+     | 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)         
+     | 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)                                             
+     | 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)                                            
+     | )                                                                                                                                        
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//snake.SnakeTestSuiteBase.checkGame(SnakeTestSuiteBase.scala:102)
+	at app//snake.basic.FullGameTests.$anonfun$new$1(FullGameTests.scala:24)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:333)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)
+	at app//snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testGame6x3"></a>
+<h3 class="failures">testGame6x3</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: The game should work at any board size which can hold the initial snake. In this case 6x3.
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=2, actions=&lt;&gt;
+Want   | Got ✗ 
+---------------
+OO&gt;..A | &gt;&gt;&gt;&gt;&gt;&gt;
+...... | &gt;&gt;&gt;&gt;&gt;&gt;
+...... | &gt;&gt;&gt;&gt;&gt;&gt;
+
+step=1, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+.OO&gt;.A | .O.&gt;..
+...... | ......
+...... | ......
+
+step=2, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+..OO&gt;A | ...O&gt;.
+...... | ......
+...... | ......
+
+step=3, rand=2, actions=&lt;Step&gt;
+Want   | Got ✓ 
+---------------
+..AOO&gt; | ..AOO&gt;
+...... | ......
+...... | ......
+
+step=4, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+&gt;.AOOO | &gt;.A.OO
+...... | ......
+...... | ......
+
+step=5, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+O&gt;AOOO | O&gt;A..O
+...... | ......
+...... | ......
+
+step=6, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OO&gt;OOO | &gt;&gt;&gt;&gt;&gt;&gt;
+..A... | &gt;&gt;&gt;&gt;&gt;&gt;
+...... | &gt;&gt;&gt;&gt;&gt;&gt;
+
+step=7, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | OO...O
+..A... | ......
+..^... | ..^...
+
+step=8, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | OO...O
+..^A.. | ..^...
+..O... | ..O...
+
+step=9, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | OO....
+.&lt;OA.. | .&lt;O...
+..O... | ..O...
+
+step=10, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | .O....
+&lt;OOA.. | &lt;OO...
+..O... | ..O...
+
+step=11, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | ......
+OOOA.&lt; | OOO..&lt;
+..O... | ..O...
+
+step=12, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | ..A...
+OOOA&lt;O | OOO.&lt;O
+..O... | ..O...
+
+step=13, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOO.OO | ..A...
+OOO&lt;OO | OOO&lt;OO
+.AO... | ......
+
+step=14, rand=2, actions=&lt;ChangeDir(South()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOO.OO | ..A...
+OOOOOO | OO.OOO
+.AOv.. | ...v..
+
+step=15, rand=2, actions=&lt;ChangeDir(East()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOO.OO | ..A...
+OOOOOO | O..OOO
+.AOO&gt;. | ...O&gt;.
+
+step=16, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOO.OO | ..A...
+OOOOOO | ...OOO
+.AOOO&gt; | ...OO&gt;
+
+step=17, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOO..O | ..A...
+OOOOOO | ...OO.
+&gt;AOOOO | &gt;..OOO
+
+step=18, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOO..A | ..A...
+OOOOOO | ...O..
+O&gt;OOOO | O&gt;.OOO
+
+step=19, rand=2, actions=&lt;Step&gt;
+Want              | Got ✗ 
+--------------------------
+GameOverDisplay() | ..A...
+                  | ......
+                  | OO&gt;OOO
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//snake.SnakeTestSuiteBase.checkGame(SnakeTestSuiteBase.scala:102)
+	at app//snake.basic.FullGameTests.$anonfun$new$3(FullGameTests.scala:308)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:333)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)
+	at app//snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testGame6x6"></a>
+<h3 class="failures">testGame6x6</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: The game should work at any board size which can hold the initial snake. In this case 6x6.
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=2, actions=&lt;&gt;
+Want   | Got ✗ 
+---------------
+OO&gt;..A | OO&gt;...
+...... | ......
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=1, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+.OO&gt;.A | .OO&gt;..
+...... | ......
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=2, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+..OO&gt;A | ..OO&gt;.
+...... | ......
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=3, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+..AOO&gt; | ...OO&gt;
+...... | ......
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=4, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+&gt;.AOOO | &gt;...OO
+...... | ......
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=5, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+O&gt;AOOO | O&gt;...O
+...... | ......
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=6, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OO&gt;OOO | OO&gt;...
+..A... | ......
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=7, rand=2, actions=&lt;ChangeDir(South()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | .OO...
+..vA.. | ..v...
+...... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=8, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | vvvvvv
+..OA.. | vvvvvv
+..v... | vvvvvv
+...... | vvvvvv
+...... | vvvvvv
+...... | vvvvvv
+
+step=9, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | .OO...
+..OA.. | ..O...
+.&lt;O... | .&lt;....
+...... | ......
+...... | ......
+...... | ......
+
+step=10, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | .OO...
+.^OA.. | .^O...
+.OO... | .O....
+...... | ......
+...... | ......
+...... | ......
+
+step=11, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | ..O...
+&lt;OOA.. | &lt;OO...
+.OO... | .O....
+...... | ......
+...... | ......
+...... | ......
+
+step=12, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOOOO | ......
+OOOA.&lt; | OOO..&lt;
+.OO... | .O....
+...... | ......
+...... | ......
+...... | ......
+
+step=13, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOO.OO | ......
+OOOA&lt;O | OO..&lt;O
+.OO... | .O....
+...... | ......
+...... | ......
+...... | ......
+
+step=14, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOO..O | ......
+OOO&lt;OO | OO.&lt;OO
+AOO... | .OA...
+...... | ......
+...... | ......
+...... | ......
+
+step=15, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOO^.O | ...^..
+OOOOOO | OO.OOO
+AOO... | ..A...
+...... | ......
+...... | ......
+...... | ......
+
+step=16, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOO.O | ...O..
+OOOOOO | O..OOO
+AOO... | ..A...
+...... | ......
+...... | ......
+...^.. | ...^..
+
+step=17, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+OOOO.O | ...O..
+OOOOOO | ...OOO
+AOO... | ..A...
+...... | ......
+...^.. | ...^..
+...O.. | ...O..
+
+step=18, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
+Want   | Got ✗ 
+---------------
+OOOO.. | ...O..
+OOOOOO | ...OO.
+AOO... | ..A...
+...... | ......
+..&lt;O.. | ..&lt;O..
+...O.. | ...O..
+
+step=19, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+.OOO.. | ...O..
+OOOOOO | ...O..
+AOO... | ..A...
+...... | ......
+.&lt;OO.. | .&lt;OO..
+...O.. | ...O..
+
+step=20, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+..OO.. | ...O..
+OOOOOO | ......
+AOO... | ..A...
+...... | ......
+&lt;OOO.. | &lt;OOO..
+...O.. | ...O..
+
+step=21, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
+Want   | Got ✗ 
+---------------
+...O.. | ......
+OOOOOO | ......
+AOO... | ..A...
+^..... | ^.....
+OOOO.. | OOOO..
+...O.. | ...O..
+
+step=22, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+..AO.. | ......
+OO.OOO | ......
+^OO... | ^.A...
+O..... | O.....
+OOOO.. | OOOO..
+...O.. | ......
+
+step=23, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
+Want   | Got ✗ 
+---------------
+..AO.. | ......
+OO.OOO | ......
+OOO..&lt; | O.A..&lt;
+O..... | O.....
+OOOO.. | OOO...
+...O.. | ......
+
+step=24, rand=2, actions=&lt;Step&gt;
+Want   | Got ✗ 
+---------------
+..AO.. | ......
+OO.OOO | ......
+OOO.&lt;O | O.A.&lt;O
+O..... | O.....
+OOOO.. | OO....
+...O.. | ......
+
+step=25, rand=2, actions=&lt;ChangeDir(South()), Step&gt;
+Want   | Got ✗ 
+---------------
+..AO.. | ......
+OO.OOO | ......
+OOO.OO | O.A.OO
+O...v. | O...v.
+OOOO.. | O.....
+...O.. | ......
+
+step=26, rand=2, actions=&lt;ChangeDir(East()), Step&gt;
+Want   | Got ✗ 
+---------------
+..AO.. | ......
+OO.OOO | ......
+OO..OO | O.A.OO
+O...O&gt; | O...O&gt;
+OOOO.. | ......
+...O.. | ......
+
+step=27, rand=2, actions=&lt;Step&gt;
+Want              | Got ✗ 
+--------------------------
+GameOverDisplay() | ......
+                  | ......
+                  | O.A.OO
+                  | &gt;...OO
+                  | ......
+                  | ......
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//snake.SnakeTestSuiteBase.checkGame(SnakeTestSuiteBase.scala:102)
+	at app//snake.basic.FullGameTests.$anonfun$new$2(FullGameTests.scala:223)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:333)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)
+	at app//snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testInterleave6x3and10x7"></a>
+<h3 class="failures">testInterleave6x3and10x7</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: didPass was false
+ Hint: It should be possible to “run” multiple games simultaneously, i.e., it should not be a problem to have multiple instances of SnakeLogic which act independently. To test this, we perform “interleave tests”: we instantiate two SnakeLogic objects with different board sizes and alternate between performing a step on one and a step on the other. If all is correct, the two games should progress exactly as they would if they were the only snake games being run. If this is not true, then there is likely some global state through which one game influences the other.   Hence if you fail this test but you passed the other full game test, then you have some global state. Running two instances of SnakeLogic/and alternately doing steps between them results in some interference.   
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkInterleave(GameTestSuite.scala:303)
+	at app//snake.SnakeTestSuiteBase.checkInterleave(SnakeTestSuiteBase.scala:107)
+	at app//snake.basic.FullGameTests.$anonfun$new$5(FullGameTests.scala:753)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:333)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)
+	at app//snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testInterleave6x3and6x6"></a>
+<h3 class="failures">testInterleave6x3and6x6</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: didPass was false
+ Hint: It should be possible to “run” multiple games simultaneously, i.e., it should not be a problem to have multiple instances of SnakeLogic which act independently. To test this, we perform “interleave tests”: we instantiate two SnakeLogic objects with different board sizes and alternate between performing a step on one and a step on the other. If all is correct, the two games should progress exactly as they would if they were the only snake games being run. If this is not true, then there is likely some global state through which one game influences the other.   Hence if you fail this test but you passed the other full game test, then you have some global state. Running two instances of SnakeLogic/and alternately doing steps between them results in some interference.   
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkInterleave(GameTestSuite.scala:303)
+	at app//snake.SnakeTestSuiteBase.checkInterleave(SnakeTestSuiteBase.scala:107)
+	at app//snake.basic.FullGameTests.$anonfun$new$7(FullGameTests.scala:762)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:333)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)
+	at app//snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testInterleave6x6and10x7"></a>
+<h3 class="failures">testInterleave6x6and10x7</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: didPass was false
+ Hint: It should be possible to “run” multiple games simultaneously, i.e., it should not be a problem to have multiple instances of SnakeLogic which act independently. To test this, we perform “interleave tests”: we instantiate two SnakeLogic objects with different board sizes and alternate between performing a step on one and a step on the other. If all is correct, the two games should progress exactly as they would if they were the only snake games being run. If this is not true, then there is likely some global state through which one game influences the other.   Hence if you fail this test but you passed the other full game test, then you have some global state. Running two instances of SnakeLogic/and alternately doing steps between them results in some interference.   
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkInterleave(GameTestSuite.scala:303)
+	at app//snake.SnakeTestSuiteBase.checkInterleave(SnakeTestSuiteBase.scala:107)
+	at app//snake.basic.FullGameTests.$anonfun$new$6(FullGameTests.scala:757)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:333)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)
+	at app//snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.2.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.2.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">testGame10x7</td>
+<td class="failures">0.043s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testGame3x1</td>
+<td class="failures">0.008s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testGame6x3</td>
+<td class="failures">0.031s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testGame6x6</td>
+<td class="failures">0.037s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testInterleave6x3and10x7</td>
+<td class="failures">0.007s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testInterleave6x3and6x6</td>
+<td class="failures">0.005s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testInterleave6x6and10x7</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 13, 2023, 1:00:58 PM</p>
+</div>
+</div>
+</body>
+</html>

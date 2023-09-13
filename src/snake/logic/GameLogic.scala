@@ -7,8 +7,8 @@ import snake.logic.GameLogic._
 class GameLogic(val random: RandomGenerator,
                 val gridDims: Dimensions) {
   private var currentDirection: Direction = East()
-  private var xHeadPosition = 5
-  private var yHeadPosition = 3
+  private var xHeadPosition = 2
+  private var yHeadPosition = 0
   private var headPosition = Point(xHeadPosition, yHeadPosition)
   private var applePosition = Point(random.randomInt(gridDims.width - 1), random.randomInt(gridDims.height - 1))
   private var appleCount = 0
@@ -29,9 +29,10 @@ class GameLogic(val random: RandomGenerator,
       appleCount += 1
       applePosition = Point(random.randomInt(gridDims.width - 1), random.randomInt(gridDims.height - 1))
       snakeBodyExtender()
-    } else {
-      snakeBody = headPosition :: snakeBody.dropRight(1) //Adds all the elements to the body except the tail to make space for the head
     }
+
+    snakeBody = headPosition :: snakeBody.dropRight(1) //Adds all the elements to the body except the tail to make space for the head
+
   }
 
 
@@ -46,7 +47,7 @@ class GameLogic(val random: RandomGenerator,
     if (headPosition == p) {
       SnakeHead(currentDirection)
     } else if (applePosition == p) {
-      Apple()
+      appleGenerator(applePosition)
     } else if (hasAppleBeenEaten()) {
       SnakeHead(currentDirection)
     } else if (snakeBody.contains(p)) {
@@ -73,9 +74,24 @@ class GameLogic(val random: RandomGenerator,
   }
 
   private def snakeBodyExtender(): Unit = {
-    val newBlocks = List.fill(3)(headPosition)
-    snakeBody = newBlocks ::: snakeBody //We don't add but make a new list with the new blocks since lists are immutable in Scala
+    for (x <- 0 until 3) {
+      snakeBody = snakeBody :+ snakeBody.last
+    }
   }
+
+  private def appleGenerator(possibleLocation: Point): CellType = {
+    val entireGrid = gridDims.allPointsInside
+    val emptyCells = entireGrid.filter { gridPoint =>
+      gridPoint != headPosition && !snakeBody.contains(gridPoint)
+    }
+
+    if (emptyCells.contains(possibleLocation)) {
+      Apple()
+    } else {
+      Empty()
+    }
+  }
+
 }
 
 
@@ -102,7 +118,3 @@ object GameLogic {
   Dimensions(width = 25, height = 25)  // you can adjust these values to play on a different sized board
 
 }
-
-
-
-

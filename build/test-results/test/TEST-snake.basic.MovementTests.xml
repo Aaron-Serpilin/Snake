@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.MovementTests" tests="5" skipped="0" failures="5" errors="0" timestamp="2023-09-12T11:01:06" hostname="Jays-MacBook-Pro-2.local" time="0.063">
+<testsuite name="snake.basic.MovementTests" tests="5" skipped="0" failures="5" errors="0" timestamp="2023-09-13T10:20:50" hostname="Jays-MacBook-Pro-2.local" time="0.072">
   <properties/>
-  <testcase name="testMove" classname="snake.basic.MovementTests" time="0.008">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: When moving the snake is extended from the head in the current direction (and he snake is&#10;shortened from the tail if it is not currently growing).&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=3, actions=&lt;&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;... | ......&#10;A..... | ......&#10;&#10;step=1, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | ......&#10;A..... | ......&#10;&#10;step=2, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;..OO&gt;. | ......&#10;A..... | ......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testMove" classname="snake.basic.MovementTests" time="0.009">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: When moving the snake is extended from the head in the current direction (and he snake is&#10;shortened from the tail if it is not currently growing).&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=3, actions=&lt;&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;... | ...A..&#10;A..... | ......&#10;&#10;step=1, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | ...A..&#10;A..... | ......&#10;&#10;step=2, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;..OO&gt;. | ...A..&#10;A..... | ......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: When moving the snake is extended from the head in the current direction (and he snake is
 shortened from the tail if it is not currently growing).
 --------------------------------------------------------------------------------
@@ -11,19 +11,19 @@ This is what went wrong:
 step=0, rand=3, actions=&lt;&gt;
 Want   | Got ✗ 
 ---------------
-OO&gt;... | ......
+OO&gt;... | ...A..
 A..... | ......
 
 step=1, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OO&gt;.. | ......
+.OO&gt;.. | ...A..
 A..... | ......
 
 step=2, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-..OO&gt;. | ......
+..OO&gt;. | ...A..
 A..... | ......
 
 
@@ -123,8 +123,8 @@ A..... | ......
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testChangeDirs" classname="snake.basic.MovementTests" time="0.013">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: You can change direction.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=2, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;.... | .... &#10;.... | .... &#10;&#10;step=1, rand=2, actions=&lt;ChangeDir(South()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO. | .... &#10;.Av. | .... &#10;.... | .... &#10;.... | .... &#10;&#10;step=2, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;..O. | .... &#10;.AO. | .... &#10;..v. | .... &#10;.... | .... &#10;&#10;step=3, rand=2, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.... | .... &#10;.AO. | .... &#10;.&lt;O. | .... &#10;.... | .... &#10;&#10;step=4, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.... | .... &#10;.A.. | .... &#10;&lt;OO. | .... &#10;.... | .... &#10;&#10;step=5, rand=2, actions=&lt;ChangeDir(North()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.... | .... &#10;^A.. | .... &#10;OO.. | .... &#10;.... | .... &#10;&#10;step=6, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;^... | .... &#10;OA.. | .... &#10;O... | .... &#10;.... | .... &#10;&#10;step=7, rand=2, actions=&lt;ChangeDir(East()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.. | .... &#10;OA.. | .... &#10;.... | .... &#10;.... | .... &#10;&#10;step=8, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;.... | .... &#10;.... | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testChangeDirs" classname="snake.basic.MovementTests" time="0.02">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: You can change direction.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=2, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;.... | ..A. &#10;.... | ...O &#10;&#10;step=1, rand=2, actions=&lt;ChangeDir(South()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO. | .... &#10;.Av. | .... &#10;.... | ..A. &#10;.... | .... &#10;&#10;step=2, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;..O. | .... &#10;.AO. | .... &#10;..v. | ..A. &#10;.... | .... &#10;&#10;step=3, rand=2, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.... | .... &#10;.AO. | &lt;... &#10;.&lt;O. | ..A. &#10;.... | .... &#10;&#10;step=4, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.... | .... &#10;.A.. | O..&lt; &#10;&lt;OO. | ..A. &#10;.... | .... &#10;&#10;step=5, rand=2, actions=&lt;ChangeDir(North()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.... | ...^ &#10;^A.. | O..O &#10;OO.. | ..A. &#10;.... | .... &#10;&#10;step=6, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;^... | ...O &#10;OA.. | ...O &#10;O... | ..A. &#10;.... | ...^ &#10;&#10;step=7, rand=2, actions=&lt;ChangeDir(East()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.. | ...O &#10;OA.. | .... &#10;.... | ..A. &#10;.... | &gt;..O &#10;&#10;step=8, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;.... | ..A. &#10;.... | O&gt;.O &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: You can change direction.
 --------------------------------------------------------------------------------
 This is what went wrong:
@@ -134,15 +134,15 @@ Want | Got ✗
 ------------
 OO&gt;. | .... 
 .A.. | .... 
-.... | .... 
-.... | .... 
+.... | ..A. 
+.... | ...O 
 
 step=1, rand=2, actions=&lt;ChangeDir(South()), Step&gt;
 Want | Got ✗
 ------------
 .OO. | .... 
 .Av. | .... 
-.... | .... 
+.... | ..A. 
 .... | .... 
 
 step=2, rand=2, actions=&lt;Step&gt;
@@ -150,56 +150,56 @@ Want | Got ✗
 ------------
 ..O. | .... 
 .AO. | .... 
-..v. | .... 
+..v. | ..A. 
 .... | .... 
 
 step=3, rand=2, actions=&lt;ChangeDir(West()), Step&gt;
 Want | Got ✗
 ------------
 .... | .... 
-.AO. | .... 
-.&lt;O. | .... 
+.AO. | &lt;... 
+.&lt;O. | ..A. 
 .... | .... 
 
 step=4, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
 .... | .... 
-.A.. | .... 
-&lt;OO. | .... 
+.A.. | O..&lt; 
+&lt;OO. | ..A. 
 .... | .... 
 
 step=5, rand=2, actions=&lt;ChangeDir(North()), Step&gt;
 Want | Got ✗
 ------------
-.... | .... 
-^A.. | .... 
-OO.. | .... 
+.... | ...^ 
+^A.. | O..O 
+OO.. | ..A. 
 .... | .... 
 
 step=6, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-^... | .... 
-OA.. | .... 
-O... | .... 
-.... | .... 
+^... | ...O 
+OA.. | ...O 
+O... | ..A. 
+.... | ...^ 
 
 step=7, rand=2, actions=&lt;ChangeDir(East()), Step&gt;
 Want | Got ✗
 ------------
-O&gt;.. | .... 
+O&gt;.. | ...O 
 OA.. | .... 
-.... | .... 
-.... | .... 
+.... | ..A. 
+.... | &gt;..O 
 
 step=8, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
 OO&gt;. | .... 
 .A.. | .... 
-.... | .... 
-.... | .... 
+.... | ..A. 
+.... | O&gt;.O 
 
 
 	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
@@ -298,8 +298,8 @@ OO&gt;. | ....
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testIgnoreEatHead" classname="snake.basic.MovementTests" time="0.012">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: It should not be possible to “crash into yourself”: If the snake is currently traveling&#10;eastwards, it should not be possible to change the current direction to west (and then die in the&#10;next step). This generalizes to other directions.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=5, actions=&lt;&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;... | ......&#10;..A... | ......&#10;&#10;step=1, rand=5, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | ......&#10;..A... | ......&#10;&#10;step=2, rand=5, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;..OO&gt;. | ......&#10;..A... | ......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testIgnoreEatHead" classname="snake.basic.MovementTests" time="0.017">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: It should not be possible to “crash into yourself”: If the snake is currently traveling&#10;eastwards, it should not be possible to change the current direction to west (and then die in the&#10;next step). This generalizes to other directions.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=5, actions=&lt;&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;... | A.....&#10;..A... | ......&#10;&#10;step=1, rand=5, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | A.....&#10;..A... | ......&#10;&#10;step=2, rand=5, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;..OO&gt;. | A.....&#10;..A... | ......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: It should not be possible to “crash into yourself”: If the snake is currently traveling
 eastwards, it should not be possible to change the current direction to west (and then die in the
 next step). This generalizes to other directions.
@@ -309,19 +309,19 @@ This is what went wrong:
 step=0, rand=5, actions=&lt;&gt;
 Want   | Got ✗ 
 ---------------
-OO&gt;... | ......
+OO&gt;... | A.....
 ..A... | ......
 
 step=1, rand=5, actions=&lt;ChangeDir(West()), Step&gt;
 Want   | Got ✗ 
 ---------------
-.OO&gt;.. | ......
+.OO&gt;.. | A.....
 ..A... | ......
 
 step=2, rand=5, actions=&lt;ChangeDir(West()), Step&gt;
 Want   | Got ✗ 
 ---------------
-..OO&gt;. | ......
+..OO&gt;. | A.....
 ..A... | ......
 
 
@@ -421,8 +421,8 @@ Want   | Got ✗
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testQuickSwitch" classname="snake.basic.MovementTests" time="0.007">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: It should not be possible to crash into yourself by changing the direction multiple times&#10;before the next step. For example, if the snake came from the west, and the we changed the current&#10;direction to north, it still should not be possible to change the direction to to west before&#10;taking a step.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=4, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;...A | .... &#10;.... | .... &#10;&#10;step=1, rand=4, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .... &#10;...A | .... &#10;.... | .... &#10;&#10;step=2, rand=4, actions=&lt;ChangeDir(North()), ChangeDir(West()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;..OO | .... &#10;...A | .... &#10;...^ | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testQuickSwitch" classname="snake.basic.MovementTests" time="0.008">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: It should not be possible to crash into yourself by changing the direction multiple times&#10;before the next step. For example, if the snake came from the west, and the we changed the current&#10;direction to north, it still should not be possible to change the direction to to west before&#10;taking a step.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=4, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .A.. &#10;...A | .... &#10;.... | .... &#10;&#10;step=1, rand=4, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .A.. &#10;...A | .... &#10;.... | .... &#10;&#10;step=2, rand=4, actions=&lt;ChangeDir(North()), ChangeDir(West()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;..OO | .A.. &#10;...A | .... &#10;...^ | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: It should not be possible to crash into yourself by changing the direction multiple times
 before the next step. For example, if the snake came from the west, and the we changed the current
 direction to north, it still should not be possible to change the direction to to west before
@@ -433,21 +433,21 @@ This is what went wrong:
 step=0, rand=4, actions=&lt;&gt;
 Want | Got ✗
 ------------
-OO&gt;. | .... 
+OO&gt;. | .A.. 
 ...A | .... 
 .... | .... 
 
 step=1, rand=4, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-.OO&gt; | .... 
+.OO&gt; | .A.. 
 ...A | .... 
 .... | .... 
 
 step=2, rand=4, actions=&lt;ChangeDir(North()), ChangeDir(West()), Step&gt;
 Want | Got ✗
 ------------
-..OO | .... 
+..OO | .A.. 
 ...A | .... 
 ...^ | .... 
 
@@ -548,8 +548,8 @@ Want | Got ✗
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testQuickSwitch2" classname="snake.basic.MovementTests" time="0.01">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: To prevent crashing into yourself, you should not just pick the first change of&#10;direction.Instead, you should take the last valid change of direction (i.e. not a change in the&#10;direction wherethe snake came from&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=4, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;...A | .... &#10;.... | .... &#10;&#10;step=1, rand=4, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .... &#10;...A | .... &#10;.... | .... &#10;&#10;step=2, rand=4, actions=&lt;ChangeDir(West()), ChangeDir(North()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;..OO | .... &#10;...A | .... &#10;...^ | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testQuickSwitch2" classname="snake.basic.MovementTests" time="0.011">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: To prevent crashing into yourself, you should not just pick the first change of&#10;direction.Instead, you should take the last valid change of direction (i.e. not a change in the&#10;direction wherethe snake came from&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=4, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .A.. &#10;...A | .... &#10;.... | .... &#10;&#10;step=1, rand=4, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .A.. &#10;...A | .... &#10;.... | .... &#10;&#10;step=2, rand=4, actions=&lt;ChangeDir(West()), ChangeDir(North()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;..OO | .A.. &#10;...A | .... &#10;...^ | ..^. &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: To prevent crashing into yourself, you should not just pick the first change of
 direction.Instead, you should take the last valid change of direction (i.e. not a change in the
 direction wherethe snake came from
@@ -559,23 +559,23 @@ This is what went wrong:
 step=0, rand=4, actions=&lt;&gt;
 Want | Got ✗
 ------------
-OO&gt;. | .... 
+OO&gt;. | .A.. 
 ...A | .... 
 .... | .... 
 
 step=1, rand=4, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-.OO&gt; | .... 
+.OO&gt; | .A.. 
 ...A | .... 
 .... | .... 
 
 step=2, rand=4, actions=&lt;ChangeDir(West()), ChangeDir(North()), Step&gt;
 Want | Got ✗
 ------------
-..OO | .... 
+..OO | .A.. 
 ...A | .... 
-...^ | .... 
+...^ | ..^. 
 
 
 	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)

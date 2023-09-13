@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.NoReverseTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-09-12T11:01:06" hostname="Jays-MacBook-Pro-2.local" time="0.013">
+<testsuite name="snake.basic.NoReverseTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-09-13T10:20:51" hostname="Jays-MacBook-Pro-2.local" time="0.017">
   <properties/>
-  <testcase name="TestNoReverseMode" classname="snake.basic.NoReverseTest" time="0.013">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: For assignment 2.1 your code should NOT implement reverse mode. This test is a reminder of&#10;this,and ensures that enabling reverse mode does nothing. If you already implemented reverse&#10;mode, do not just disable reverse mode, remove any code that deals with it.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=2, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;&#10;step=1, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .... &#10;.A.. | .... &#10;&#10;step=2, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;&gt;.OO | .... &#10;.A.. | .... &#10;&#10;step=3, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.O | .... &#10;.A.. | .... &#10;&#10;step=4, rand=2, actions=&lt;ReverseGame(true), Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;&#10;step=5, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .... &#10;.A.. | .... &#10;&#10;step=6, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;&gt;.OO | .... &#10;.A.. | .... &#10;&#10;step=7, rand=2, actions=&lt;ReverseGame(false), Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.O | .... &#10;.A.. | .... &#10;&#10;step=8, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;&#10;step=9, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .... &#10;.A.. | .... &#10;&#10;step=10, rand=2, actions=&lt;ReverseGame(true), Step&gt;&#10;Want | Got ✗&#10;------------&#10;&gt;.OO | .... &#10;.A.. | .... &#10;&#10;step=11, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.O | .... &#10;.A.. | .... &#10;&#10;step=12, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | .... &#10;.A.. | .... &#10;&#10;step=13, rand=2, actions=&lt;ReverseGame(false), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | .... &#10;.A.. | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="TestNoReverseMode" classname="snake.basic.NoReverseTest" time="0.017">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: For assignment 2.1 your code should NOT implement reverse mode. This test is a reminder of&#10;this,and ensures that enabling reverse mode does nothing. If you already implemented reverse&#10;mode, do not just disable reverse mode, remove any code that deals with it.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=2, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | ..A. &#10;.A.. | .... &#10;&#10;step=1, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | ..A. &#10;.A.. | .... &#10;&#10;step=2, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;&gt;.OO | ..A. &#10;.A.. | .... &#10;&#10;step=3, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.O | ..A. &#10;.A.. | .... &#10;&#10;step=4, rand=2, actions=&lt;ReverseGame(true), Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | ..A. &#10;.A.. | .... &#10;&#10;step=5, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | ..A. &#10;.A.. | .... &#10;&#10;step=6, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;&gt;.OO | ..A. &#10;.A.. | .... &#10;&#10;step=7, rand=2, actions=&lt;ReverseGame(false), Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.O | ..A. &#10;.A.. | .... &#10;&#10;step=8, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | ..A. &#10;.A.. | .... &#10;&#10;step=9, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | ..A. &#10;.A.. | .... &#10;&#10;step=10, rand=2, actions=&lt;ReverseGame(true), Step&gt;&#10;Want | Got ✗&#10;------------&#10;&gt;.OO | ..A. &#10;.A.. | .... &#10;&#10;step=11, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;O&gt;.O | ..A. &#10;.A.. | .... &#10;&#10;step=12, rand=2, actions=&lt;Step&gt;&#10;Want | Got ✗&#10;------------&#10;OO&gt;. | ..A. &#10;.A.. | .... &#10;&#10;step=13, rand=2, actions=&lt;ReverseGame(false), Step&gt;&#10;Want | Got ✗&#10;------------&#10;.OO&gt; | ..A. &#10;.A.. | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: For assignment 2.1 your code should NOT implement reverse mode. This test is a reminder of
 this,and ensures that enabling reverse mode does nothing. If you already implemented reverse
 mode, do not just disable reverse mode, remove any code that deals with it.
@@ -12,85 +12,85 @@ This is what went wrong:
 step=0, rand=2, actions=&lt;&gt;
 Want | Got ✗
 ------------
-OO&gt;. | .... 
+OO&gt;. | ..A. 
 .A.. | .... 
 
 step=1, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-.OO&gt; | .... 
+.OO&gt; | ..A. 
 .A.. | .... 
 
 step=2, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-&gt;.OO | .... 
+&gt;.OO | ..A. 
 .A.. | .... 
 
 step=3, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-O&gt;.O | .... 
+O&gt;.O | ..A. 
 .A.. | .... 
 
 step=4, rand=2, actions=&lt;ReverseGame(true), Step&gt;
 Want | Got ✗
 ------------
-OO&gt;. | .... 
+OO&gt;. | ..A. 
 .A.. | .... 
 
 step=5, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-.OO&gt; | .... 
+.OO&gt; | ..A. 
 .A.. | .... 
 
 step=6, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-&gt;.OO | .... 
+&gt;.OO | ..A. 
 .A.. | .... 
 
 step=7, rand=2, actions=&lt;ReverseGame(false), Step&gt;
 Want | Got ✗
 ------------
-O&gt;.O | .... 
+O&gt;.O | ..A. 
 .A.. | .... 
 
 step=8, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-OO&gt;. | .... 
+OO&gt;. | ..A. 
 .A.. | .... 
 
 step=9, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-.OO&gt; | .... 
+.OO&gt; | ..A. 
 .A.. | .... 
 
 step=10, rand=2, actions=&lt;ReverseGame(true), Step&gt;
 Want | Got ✗
 ------------
-&gt;.OO | .... 
+&gt;.OO | ..A. 
 .A.. | .... 
 
 step=11, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-O&gt;.O | .... 
+O&gt;.O | ..A. 
 .A.. | .... 
 
 step=12, rand=2, actions=&lt;Step&gt;
 Want | Got ✗
 ------------
-OO&gt;. | .... 
+OO&gt;. | ..A. 
 .A.. | .... 
 
 step=13, rand=2, actions=&lt;ReverseGame(false), Step&gt;
 Want | Got ✗
 ------------
-.OO&gt; | .... 
+.OO&gt; | ..A. 
 .A.. | .... 
 
 
