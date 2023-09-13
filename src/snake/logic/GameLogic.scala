@@ -17,10 +17,12 @@ class GameLogic(val random: RandomGenerator,
     Point(xHeadPosition - 1, yHeadPosition),
     Point(xHeadPosition - 2, yHeadPosition)
   )
+  private var gameConcluded = false
 
-  def gameOver: Boolean = false
+  def gameOver: Boolean = gameConcluded
 
   def step(): Unit = {
+    if (collisionDetector()) {gameConcluded = true}
     headPosition = snakeMovement(headPosition, currentDirection)
     xHeadPosition = headPosition.x
     yHeadPosition = headPosition.y
@@ -90,6 +92,14 @@ class GameLogic(val random: RandomGenerator,
     } else {
       Empty()
     }
+  }
+
+  private def collisionDetector(): Boolean = {
+
+    if (snakeBody.tail.contains(headPosition)) {
+      return true
+    }
+    false
   }
 
 }
