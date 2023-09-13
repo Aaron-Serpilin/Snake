@@ -10,25 +10,26 @@ class GameLogic(val random: RandomGenerator,
   private var xHeadPosition = 2
   private var yHeadPosition = 0
   private var headPosition = Point(xHeadPosition, yHeadPosition)
-  private var applePosition = Point(random.randomInt(gridDims.width - 1), random.randomInt(gridDims.height - 1))
-  private var appleCount = 0
   private var snakeBody: List[Point] = List( //Initially define the snake to have a head and two body parts
     headPosition,
     Point(xHeadPosition - 1, yHeadPosition),
     Point(xHeadPosition - 2, yHeadPosition)
   )
+  private var applePosition = appleGenerator() //Initialize it to something
   private var gameConcluded = false
 
+
+  //apple is random now
   def gameOver: Boolean = gameConcluded
 
   def step(): Unit = {
+    println(s"The apple location is ${applePosition}")
     if (collisionDetector()) {gameConcluded = true}
     headPosition = snakeMovement(headPosition, currentDirection)
     xHeadPosition = headPosition.x
     yHeadPosition = headPosition.y
 
     if (hasAppleBeenEaten()) {
-      appleCount += 1
       applePosition = Point(random.randomInt(gridDims.width - 1), random.randomInt(gridDims.height - 1))
       snakeBodyExtender()
     }
@@ -43,17 +44,20 @@ class GameLogic(val random: RandomGenerator,
 
   def changeDir(d: Direction): Unit = {
     currentDirection = d
+    //Check for opposites
   }
 
   def getCellType(p: Point): CellType = {
     if (headPosition == p) {
       SnakeHead(currentDirection)
     } else if (applePosition == p) {
-      appleGenerator(applePosition)
+      Apple()
     } else if (hasAppleBeenEaten()) {
       SnakeHead(currentDirection)
     } else if (snakeBody.contains(p)) {
-      SnakeBody(0) //Define color of snakeBody
+      val snakeBodyIndex = snakeBody.indexOf(p)
+      val colorIndex = snakeBodyIndex.toFloat / (snakeBody.length - 1)
+      SnakeBody(colorIndex) //Define color of snakeBody
     } else {
       Empty()
     }
@@ -81,18 +85,19 @@ class GameLogic(val random: RandomGenerator,
     }
   }
 
-  private def appleGenerator(possibleLocation: Point): CellType = {
-    val entireGrid = gridDims.allPointsInside
-    val emptyCells = entireGrid.filter { gridPoint =>
-      gridPoint != headPosition && !snakeBody.contains(gridPoint)
-    }
 
-    if (emptyCells.contains(possibleLocation)) {
-      Apple()
+  private def appleGenerator(): Point = {
+    val entireGrid = gridDims.allPointsInside
+    val emptyCells = entireGrid.filterNot(p => snakeBody.contains(p)).toList
+
+    if (emptyCells.nonEmpty) {
+      val randomIndex = random.randomInt(emptyCells.length)
+      emptyCells(randomIndex)
     } else {
-      Empty()
+      Point(random.randomInt(gridDims.width), random.randomInt(gridDims.height))
     }
   }
+
 
   private def collisionDetector(): Boolean = {
 

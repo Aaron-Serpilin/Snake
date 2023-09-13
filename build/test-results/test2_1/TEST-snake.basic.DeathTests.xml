@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.DeathTests" tests="3" skipped="0" failures="3" errors="0" timestamp="2023-09-13T11:00:58" hostname="Jays-MacBook-Pro-2.local" time="0.039">
+<testsuite name="snake.basic.DeathTests" tests="3" skipped="0" failures="3" errors="0" timestamp="2023-09-13T16:13:00" hostname="dhcp-134-158.th.vu.nl" time="0.04">
   <properties/>
-  <testcase name="testGameOver" classname="snake.basic.DeathTests" time="0.024">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: The game ends when as the head of the snake collides with the rest of the snake.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;A.. | .O&gt;...&#10;...... | ......&#10;...... | ......&#10;&#10;step=1, rand=6, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | AOO&gt;..&#10;...A.. | ......&#10;...... | ......&#10;&#10;step=2, rand=6, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOO&gt;. | A.OO&gt;.&#10;...A.. | ......&#10;...... | ......&#10;&#10;step=3, rand=6, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOOO&gt; | A..OO&gt;&#10;...A.. | ......&#10;...... | ......&#10;&#10;step=4, rand=6, actions=&lt;ChangeDir(South()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOOOO | A...OO&#10;...A.v | .....v&#10;...... | ......&#10;&#10;step=5, rand=6, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;..OOOO | A....O&#10;...A&lt;O | ....&lt;O&#10;...... | ......&#10;&#10;step=6, rand=6, actions=&lt;ChangeDir(North()), Step&gt;&#10;Want              | Got ✗ &#10;--------------------------&#10;GameOverDisplay() | A...^.&#10;                  | ....OO&#10;                  | ......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testGameOver" classname="snake.basic.DeathTests" time="0.012">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: The game ends when as the head of the snake collides with the rest of the snake.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want   | Got ✓ &#10;---------------&#10;OO&gt;A.. | OO&gt;A..&#10;...... | ......&#10;...... | ......&#10;&#10;step=1, rand=6, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | OAO&gt;..&#10;...A.. | ......&#10;...... | ......&#10;&#10;step=2, rand=6, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOO&gt;. | OAOO&gt;.&#10;...A.. | ......&#10;...... | ......&#10;&#10;step=3, rand=6, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOOO&gt; | OAOOO&gt;&#10;...A.. | ......&#10;...... | ......&#10;&#10;step=4, rand=6, actions=&lt;ChangeDir(South()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOOOO | .AOOOO&#10;...A.v | .....v&#10;...... | ......&#10;&#10;step=5, rand=6, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;..OOOO | .AOOOO&#10;...A&lt;O | ....&lt;O&#10;...... | ......&#10;&#10;step=6, rand=6, actions=&lt;ChangeDir(North()), Step&gt;&#10;Want              | Got ✗ &#10;--------------------------&#10;GameOverDisplay() | .A.O^O&#10;                  | ....OO&#10;                  | ......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: The game ends when as the head of the snake collides with the rest of the snake.
 --------------------------------------------------------------------------------
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want   | Got ✗ 
+Want   | Got ✓ 
 ---------------
-OO&gt;A.. | .O&gt;...
+OO&gt;A.. | OO&gt;A..
 ...... | ......
 ...... | ......
 
 step=1, rand=6, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OO&gt;.. | AOO&gt;..
+.OO&gt;.. | OAO&gt;..
 ...A.. | ......
 ...... | ......
 
 step=2, rand=6, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOO&gt;. | A.OO&gt;.
+.OOO&gt;. | OAOO&gt;.
 ...A.. | ......
 ...... | ......
 
 step=3, rand=6, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOOO&gt; | A..OO&gt;
+.OOOO&gt; | OAOOO&gt;
 ...A.. | ......
 ...... | ......
 
 step=4, rand=6, actions=&lt;ChangeDir(South()), Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOOOO | A...OO
+.OOOOO | .AOOOO
 ...A.v | .....v
 ...... | ......
 
 step=5, rand=6, actions=&lt;ChangeDir(West()), Step&gt;
 Want   | Got ✗ 
 ---------------
-..OOOO | A....O
+..OOOO | .AOOOO
 ...A&lt;O | ....&lt;O
 ...... | ......
 
 step=6, rand=6, actions=&lt;ChangeDir(North()), Step&gt;
 Want              | Got ✗ 
 --------------------------
-GameOverDisplay() | A...^.
+GameOverDisplay() | .A.O^O
                   | ....OO
                   | ......
 
@@ -140,53 +140,53 @@ GameOverDisplay() | A...^.
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testPreciselyDoesNotDie" classname="snake.basic.DeathTests" time="0.009">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: The game should not end if the tail of the snake is exactly at the next position of the head&#10;(and the snake does not grow)&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;A.. | .O&gt;...&#10;...... | ......&#10;&#10;step=1, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | AOO&gt;..&#10;A..... | ......&#10;&#10;step=2, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOO&gt;. | A.OO&gt;.&#10;A..... | ......&#10;&#10;step=3, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOOO&gt; | A..OO&gt;&#10;A..... | ......&#10;&#10;step=4, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;&gt;OOOOO | &gt;...OO&#10;A..... | ......&#10;&#10;step=5, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;O&gt;OOOO | O&gt;..OO&#10;A..... | ......&#10;&#10;step=6, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;OOO | OO&gt;.OO&#10;A..... | ......&#10;&#10;step=7, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OOO&gt;OO | &gt;&gt;&gt;&gt;&gt;&gt;&#10;A..... | &gt;&gt;&gt;&gt;&gt;&gt;&#10;&#10;step=8, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OOOO&gt;O | OOO.&gt;O&#10;A..... | ......&#10;&#10;step=9, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OOOOO&gt; | OOO.O&gt;&#10;A..... | ......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testPreciselyDoesNotDie" classname="snake.basic.DeathTests" time="0.019">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: The game should not end if the tail of the snake is exactly at the next position of the head&#10;(and the snake does not grow)&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want   | Got ✓ &#10;---------------&#10;OO&gt;A.. | OO&gt;A..&#10;...... | ......&#10;&#10;step=1, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OO&gt;.. | &gt;&gt;&gt;&gt;&gt;&gt;&#10;A..... | &gt;&gt;&gt;&gt;&gt;&gt;&#10;&#10;step=2, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOO&gt;. | OOOA&gt;.&#10;A..... | ......&#10;&#10;step=3, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;.OOOO&gt; | OOOAO&gt;&#10;A..... | ......&#10;&#10;step=4, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;&gt;OOOOO | &gt;OOAOO&#10;A..... | ......&#10;&#10;step=5, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;O&gt;OOOO | O&gt;OAOO&#10;A..... | ......&#10;&#10;step=6, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OO&gt;OOO | OO&gt;AOO&#10;A..... | ......&#10;&#10;step=7, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗ &#10;---------------&#10;OOO&gt;OO | &gt;&gt;&gt;&gt;&gt;&gt;&#10;A..... | &gt;&gt;&gt;&gt;&gt;&gt;&#10;&#10;step=8, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗            &#10;--------------------------&#10;OOOO&gt;O | GameOverDisplay()&#10;A..... |                  &#10;&#10;step=9, rand=3, actions=&lt;Step&gt;&#10;Want   | Got ✗            &#10;--------------------------&#10;OOOOO&gt; | GameOverDisplay()&#10;A..... |                  &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: The game should not end if the tail of the snake is exactly at the next position of the head
 (and the snake does not grow)
 --------------------------------------------------------------------------------
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want   | Got ✗ 
+Want   | Got ✓ 
 ---------------
-OO&gt;A.. | .O&gt;...
+OO&gt;A.. | OO&gt;A..
 ...... | ......
 
 step=1, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OO&gt;.. | AOO&gt;..
-A..... | ......
+.OO&gt;.. | &gt;&gt;&gt;&gt;&gt;&gt;
+A..... | &gt;&gt;&gt;&gt;&gt;&gt;
 
 step=2, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOO&gt;. | A.OO&gt;.
+.OOO&gt;. | OOOA&gt;.
 A..... | ......
 
 step=3, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOOO&gt; | A..OO&gt;
+.OOOO&gt; | OOOAO&gt;
 A..... | ......
 
 step=4, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-&gt;OOOOO | &gt;...OO
+&gt;OOOOO | &gt;OOAOO
 A..... | ......
 
 step=5, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-O&gt;OOOO | O&gt;..OO
+O&gt;OOOO | O&gt;OAOO
 A..... | ......
 
 step=6, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-OO&gt;OOO | OO&gt;.OO
+OO&gt;OOO | OO&gt;AOO
 A..... | ......
 
 step=7, rand=3, actions=&lt;Step&gt;
@@ -196,16 +196,16 @@ OOO&gt;OO | &gt;&gt;&gt;&gt;&gt;&gt;
 A..... | &gt;&gt;&gt;&gt;&gt;&gt;
 
 step=8, rand=3, actions=&lt;Step&gt;
-Want   | Got ✗ 
----------------
-OOOO&gt;O | OOO.&gt;O
-A..... | ......
+Want   | Got ✗            
+--------------------------
+OOOO&gt;O | GameOverDisplay()
+A..... |                  
 
 step=9, rand=3, actions=&lt;Step&gt;
-Want   | Got ✗ 
----------------
-OOOOO&gt; | OOO.O&gt;
-A..... | ......
+Want   | Got ✗            
+--------------------------
+OOOOO&gt; | GameOverDisplay()
+A..... |                  
 
 
 	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
@@ -291,17 +291,17 @@ A..... | ......
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testNoEscapeGameOver" classname="snake.basic.DeathTests" time="0.004">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: The snake should not move anymore after the game is over, hence it should not be possible to&#10;“escape” from a game over by moving though the snake.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want  | Got ✗&#10;-------------&#10;OO&gt;A. | .O&gt;..&#10;..... | .....&#10;..... | .....&#10;..... | .....&#10;&#10;step=1, rand=0, actions=&lt;Step&gt;&#10;Want  | Got ✓&#10;-------------&#10;AOO&gt;. | AOO&gt;.&#10;..... | .....&#10;..... | .....&#10;..... | .....&#10;&#10;step=2, rand=0, actions=&lt;ChangeDir(South()), Step&gt;&#10;Want  | Got ✗&#10;-------------&#10;AOOO. | A.OO.&#10;...v. | ...v.&#10;..... | .....&#10;..... | .....&#10;&#10;step=3, rand=0, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want  | Got ✗&#10;-------------&#10;AOOO. | A..O.&#10;..&lt;O. | ..&lt;O.&#10;..... | .....&#10;..... | .....&#10;&#10;step=4, rand=0, actions=&lt;ChangeDir(North()), Step&gt;&#10;Want              | Got ✗&#10;-------------------------&#10;GameOverDisplay() | A.^..&#10;                  | ..OO.&#10;                  | .....&#10;                  | .....&#10;&#10;step=5, rand=0, actions=&lt;Step&gt;&#10;Want              | Got ✗&#10;-------------------------&#10;GameOverDisplay() | A.O..&#10;                  | ..O..&#10;                  | .....&#10;                  | ..^..&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testNoEscapeGameOver" classname="snake.basic.DeathTests" time="0.007">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: The snake should not move anymore after the game is over, hence it should not be possible to&#10;“escape” from a game over by moving though the snake.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want  | Got ✓&#10;-------------&#10;OO&gt;A. | OO&gt;A.&#10;..... | .....&#10;..... | .....&#10;..... | .....&#10;&#10;step=1, rand=0, actions=&lt;Step&gt;&#10;Want  | Got ✓&#10;-------------&#10;AOO&gt;. | AOO&gt;.&#10;..... | .....&#10;..... | .....&#10;..... | .....&#10;&#10;step=2, rand=0, actions=&lt;ChangeDir(South()), Step&gt;&#10;Want  | Got ✓&#10;-------------&#10;AOOO. | AOOO.&#10;...v. | ...v.&#10;..... | .....&#10;..... | .....&#10;&#10;step=3, rand=0, actions=&lt;ChangeDir(West()), Step&gt;&#10;Want  | Got ✓&#10;-------------&#10;AOOO. | AOOO.&#10;..&lt;O. | ..&lt;O.&#10;..... | .....&#10;..... | .....&#10;&#10;step=4, rand=0, actions=&lt;ChangeDir(North()), Step&gt;&#10;Want              | Got ✗&#10;-------------------------&#10;GameOverDisplay() | AO^O.&#10;                  | ..OO.&#10;                  | .....&#10;                  | .....&#10;&#10;step=5, rand=0, actions=&lt;Step&gt;&#10;Want              | Got ✓            &#10;-------------------------------------&#10;GameOverDisplay() | GameOverDisplay()&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: The snake should not move anymore after the game is over, hence it should not be possible to
 “escape” from a game over by moving though the snake.
 --------------------------------------------------------------------------------
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want  | Got ✗
+Want  | Got ✓
 -------------
-OO&gt;A. | .O&gt;..
+OO&gt;A. | OO&gt;A.
 ..... | .....
 ..... | .....
 ..... | .....
@@ -315,17 +315,17 @@ AOO&gt;. | AOO&gt;.
 ..... | .....
 
 step=2, rand=0, actions=&lt;ChangeDir(South()), Step&gt;
-Want  | Got ✗
+Want  | Got ✓
 -------------
-AOOO. | A.OO.
+AOOO. | AOOO.
 ...v. | ...v.
 ..... | .....
 ..... | .....
 
 step=3, rand=0, actions=&lt;ChangeDir(West()), Step&gt;
-Want  | Got ✗
+Want  | Got ✓
 -------------
-AOOO. | A..O.
+AOOO. | AOOO.
 ..&lt;O. | ..&lt;O.
 ..... | .....
 ..... | .....
@@ -333,18 +333,15 @@ AOOO. | A..O.
 step=4, rand=0, actions=&lt;ChangeDir(North()), Step&gt;
 Want              | Got ✗
 -------------------------
-GameOverDisplay() | A.^..
+GameOverDisplay() | AO^O.
                   | ..OO.
                   | .....
                   | .....
 
 step=5, rand=0, actions=&lt;Step&gt;
-Want              | Got ✗
--------------------------
-GameOverDisplay() | A.O..
-                  | ..O..
-                  | .....
-                  | ..^..
+Want              | Got ✓            
+-------------------------------------
+GameOverDisplay() | GameOverDisplay()
 
 
 	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
@@ -430,6 +427,26 @@ GameOverDisplay() | A.O..
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <system-out><![CDATA[The apple location is Point(3,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(0,0)
+The apple location is Point(0,0)
+The apple location is Point(0,0)
+The apple location is Point(0,0)
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.037s</div>
+<div class="counter">0.038s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,6 +66,9 @@
 <li>
 <a href="#tab1">Tests</a>
 </li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
@@ -79,51 +82,51 @@ Hint: The game ends when as the head of the snake collides with the rest of the 
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want   | Got ✗ 
+Want   | Got ✓ 
 ---------------
-OO&gt;A.. | .O&gt;...
+OO&gt;A.. | OO&gt;A..
 ...... | ......
 ...... | ......
 
 step=1, rand=6, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OO&gt;.. | AOO&gt;..
+.OO&gt;.. | OAO&gt;..
 ...A.. | ......
 ...... | ......
 
 step=2, rand=6, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOO&gt;. | A.OO&gt;.
+.OOO&gt;. | OAOO&gt;.
 ...A.. | ......
 ...... | ......
 
 step=3, rand=6, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOOO&gt; | A..OO&gt;
+.OOOO&gt; | OAOOO&gt;
 ...A.. | ......
 ...... | ......
 
 step=4, rand=6, actions=&lt;ChangeDir(South()), Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOOOO | A...OO
+.OOOOO | .AOOOO
 ...A.v | .....v
 ...... | ......
 
 step=5, rand=6, actions=&lt;ChangeDir(West()), Step&gt;
 Want   | Got ✗ 
 ---------------
-..OOOO | A....O
+..OOOO | .AOOOO
 ...A&lt;O | ....&lt;O
 ...... | ......
 
 step=6, rand=6, actions=&lt;ChangeDir(North()), Step&gt;
 Want              | Got ✗ 
 --------------------------
-GameOverDisplay() | A...^.
+GameOverDisplay() | .A.O^O
                   | ....OO
                   | ......
 
@@ -223,9 +226,9 @@ Hint: The snake should not move anymore after the game is over, hence it should 
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want  | Got ✗
+Want  | Got ✓
 -------------
-OO&gt;A. | .O&gt;..
+OO&gt;A. | OO&gt;A.
 ..... | .....
 ..... | .....
 ..... | .....
@@ -239,17 +242,17 @@ AOO&gt;. | AOO&gt;.
 ..... | .....
 
 step=2, rand=0, actions=&lt;ChangeDir(South()), Step&gt;
-Want  | Got ✗
+Want  | Got ✓
 -------------
-AOOO. | A.OO.
+AOOO. | AOOO.
 ...v. | ...v.
 ..... | .....
 ..... | .....
 
 step=3, rand=0, actions=&lt;ChangeDir(West()), Step&gt;
-Want  | Got ✗
+Want  | Got ✓
 -------------
-AOOO. | A..O.
+AOOO. | AOOO.
 ..&lt;O. | ..&lt;O.
 ..... | .....
 ..... | .....
@@ -257,18 +260,15 @@ AOOO. | A..O.
 step=4, rand=0, actions=&lt;ChangeDir(North()), Step&gt;
 Want              | Got ✗
 -------------------------
-GameOverDisplay() | A.^..
+GameOverDisplay() | AO^O.
                   | ..OO.
                   | .....
                   | .....
 
 step=5, rand=0, actions=&lt;Step&gt;
-Want              | Got ✗
--------------------------
-GameOverDisplay() | A.O..
-                  | ..O..
-                  | .....
-                  | ..^..
+Want              | Got ✓            
+-------------------------------------
+GameOverDisplay() | GameOverDisplay()
 
 
 	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
@@ -366,45 +366,45 @@ Hint: The game should not end if the tail of the snake is exactly at the next po
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want   | Got ✗ 
+Want   | Got ✓ 
 ---------------
-OO&gt;A.. | .O&gt;...
+OO&gt;A.. | OO&gt;A..
 ...... | ......
 
 step=1, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OO&gt;.. | AOO&gt;..
-A..... | ......
+.OO&gt;.. | &gt;&gt;&gt;&gt;&gt;&gt;
+A..... | &gt;&gt;&gt;&gt;&gt;&gt;
 
 step=2, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOO&gt;. | A.OO&gt;.
+.OOO&gt;. | OOOA&gt;.
 A..... | ......
 
 step=3, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-.OOOO&gt; | A..OO&gt;
+.OOOO&gt; | OOOAO&gt;
 A..... | ......
 
 step=4, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-&gt;OOOOO | &gt;...OO
+&gt;OOOOO | &gt;OOAOO
 A..... | ......
 
 step=5, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-O&gt;OOOO | O&gt;..OO
+O&gt;OOOO | O&gt;OAOO
 A..... | ......
 
 step=6, rand=3, actions=&lt;Step&gt;
 Want   | Got ✗ 
 ---------------
-OO&gt;OOO | OO&gt;.OO
+OO&gt;OOO | OO&gt;AOO
 A..... | ......
 
 step=7, rand=3, actions=&lt;Step&gt;
@@ -414,16 +414,16 @@ OOO&gt;OO | &gt;&gt;&gt;&gt;&gt;&gt;
 A..... | &gt;&gt;&gt;&gt;&gt;&gt;
 
 step=8, rand=3, actions=&lt;Step&gt;
-Want   | Got ✗ 
----------------
-OOOO&gt;O | OOO.&gt;O
-A..... | ......
+Want   | Got ✗            
+--------------------------
+OOOO&gt;O | GameOverDisplay()
+A..... |                  
 
 step=9, rand=3, actions=&lt;Step&gt;
-Want   | Got ✗ 
----------------
-OOOOO&gt; | OOO.O&gt;
-A..... | ......
+Want   | Got ✗            
+--------------------------
+OOOOO&gt; | GameOverDisplay()
+A..... |                  
 
 
 	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
@@ -523,20 +523,46 @@ A..... | ......
 </thead>
 <tr>
 <td class="failures">testGameOver</td>
-<td class="failures">0.024s</td>
+<td class="failures">0.012s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testNoEscapeGameOver</td>
-<td class="failures">0.004s</td>
+<td class="failures">0.007s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testPreciselyDoesNotDie</td>
-<td class="failures">0.009s</td>
+<td class="failures">0.019s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>The apple location is Point(3,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(3,0)
+The apple location is Point(0,0)
+The apple location is Point(0,0)
+The apple location is Point(0,0)
+The apple location is Point(0,0)
+</pre>
+</span>
 </div>
 </div>
 <div id="footer">
@@ -546,7 +572,7 @@ A..... | ......
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 13, 2023, 1:00:58 PM</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 13, 2023, 6:13:00 PM</p>
 </div>
 </div>
 </body>

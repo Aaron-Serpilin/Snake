@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.042s</div>
+<div class="counter">0.074s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,6 +66,9 @@
 <li>
 <a href="#tab1">Tests</a>
 </li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
@@ -83,15 +86,15 @@ placed).
 This is what went wrong:
 
 step=0, rand=1, actions=&lt;&gt;
-Want       | Got ✗     
+Want       | Got ✓     
 -----------------------
-OO&gt;.A..... | O.&gt;.......
+OO&gt;.A..... | OO&gt;.A.....
 .......... | ..........
 
 step=1, rand=1, actions=&lt;Step&gt;
-Want       | Got ✗     
+Want       | Got ✓     
 -----------------------
-.OO&gt;A..... | ..O&gt;......
+.OO&gt;A..... | .OO&gt;A.....
 .......... | ..........
 
 step=2, rand=10, actions=&lt;Step&gt;
@@ -103,31 +106,31 @@ Want       | Got ✗
 step=3, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-..OOO&gt;.... | .A.OO&gt;....
+..OOO&gt;.... | .AOOO&gt;....
 ...A...... | ..........
 
 step=4, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-..OOOO&gt;... | .A..OO&gt;...
+..OOOO&gt;... | .AOOOO&gt;...
 ...A...... | ..........
 
 step=5, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-..OOOOO&gt;.. | .A...OO&gt;..
+..OOOOO&gt;.. | .AOOOOO&gt;..
 ...A...... | ..........
 
 step=6, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-...OOOOO&gt;. | .A....OO&gt;.
+...OOOOO&gt;. | .A.OOOOO&gt;.
 ...A...... | ..........
 
 step=7, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-....OOOOO&gt; | .A.....OO&gt;
+....OOOOO&gt; | .A..OOOOO&gt;
 ...A...... | ..........
 
 
@@ -226,69 +229,69 @@ stacked.
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want           | Got ✗         
+Want           | Got ✓         
 -------------------------------
-OO&gt;A.......... | .O&gt;...........
+OO&gt;A.......... | OO&gt;A..........
 .............. | ..............
 
 step=1, rand=2, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OO&gt;.A........ | AOO&gt;..........
+.OO&gt;.A........ | OOA&gt;..........
 .............. | ..............
 
 step=2, rand=2, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOO&gt;A........ | A.OO&gt;.........
+.OOO&gt;A........ | OOAO&gt;.........
 .............. | ..............
 
 step=3, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOO&gt;........ | A..OO&gt;........
+.OOOO&gt;........ | OOAOO&gt;........
 .A............ | ..............
 
 step=4, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOO&gt;....... | A...OO&gt;.......
+.OOOOO&gt;....... | .OAOOO&gt;.......
 .A............ | ..............
 
 step=5, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOOO&gt;...... | A....OO&gt;......
+.OOOOOO&gt;...... | ..AOOOO&gt;......
 .A............ | ..............
 
 step=6, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOOOO&gt;..... | A.....OO&gt;.....
+.OOOOOOO&gt;..... | ..AOOOOO&gt;.....
 .A............ | ..............
 
 step=7, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOOOOO&gt;.... | A......OO&gt;....
+.OOOOOOOO&gt;.... | ..A.OOOOO&gt;....
 .A............ | ..............
 
 step=8, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-..OOOOOOOO&gt;... | A.......OO&gt;...
+..OOOOOOOO&gt;... | ..A..OOOOO&gt;...
 .A............ | ..............
 
 step=9, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-...OOOOOOOO&gt;.. | A........OO&gt;..
+...OOOOOOOO&gt;.. | ..A...OOOOO&gt;..
 .A............ | ..............
 
 step=10, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-....OOOOOOOO&gt;. | A.........OO&gt;.
+....OOOOOOOO&gt;. | ..A....OOOOO&gt;.
 .A............ | ..............
 
 
@@ -389,15 +392,38 @@ Want           | Got ✗
 </thead>
 <tr>
 <td class="failures">testGrow</td>
-<td class="failures">0.008s</td>
+<td class="failures">0.038s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testGrowTwice</td>
-<td class="failures">0.034s</td>
+<td class="failures">0.036s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>The apple location is Point(4,0)
+The apple location is Point(4,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(3,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+</pre>
+</span>
 </div>
 </div>
 <div id="footer">
@@ -407,7 +433,7 @@ Want           | Got ✗
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 13, 2023, 1:00:58 PM</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 13, 2023, 6:13:00 PM</p>
 </div>
 </div>
 </body>

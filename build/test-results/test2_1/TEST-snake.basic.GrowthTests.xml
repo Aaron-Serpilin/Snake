@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.GrowthTests" tests="2" skipped="0" failures="2" errors="0" timestamp="2023-09-13T11:00:58" hostname="Jays-MacBook-Pro-2.local" time="0.047">
+<testsuite name="snake.basic.GrowthTests" tests="2" skipped="0" failures="2" errors="0" timestamp="2023-09-13T16:13:00" hostname="dhcp-134-158.th.vu.nl" time="0.075">
   <properties/>
-  <testcase name="testGrow" classname="snake.basic.GrowthTests" time="0.008">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: After eating the apple, the snake should grow by one cell per step, for three steps. This&#10;means that the tail should not be shortened for three steps. The new food should be placed as soon&#10;as the previous food is eaten. The snake should grow after eating the apple, it should not&#10;already have grown in the frame where the head of the snake eats the apple (and a new apple is&#10;placed).&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=1, actions=&lt;&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;OO&gt;.A..... | O.&gt;.......&#10;.......... | ..........&#10;&#10;step=1, rand=1, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;.OO&gt;A..... | ..O&gt;......&#10;.......... | ..........&#10;&#10;step=2, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OO&gt;..... | .AOO&gt;.....&#10;...A...... | ..........&#10;&#10;step=3, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OOO&gt;.... | .A.OO&gt;....&#10;...A...... | ..........&#10;&#10;step=4, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OOOO&gt;... | .A..OO&gt;...&#10;...A...... | ..........&#10;&#10;step=5, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OOOOO&gt;.. | .A...OO&gt;..&#10;...A...... | ..........&#10;&#10;step=6, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;...OOOOO&gt;. | .A....OO&gt;.&#10;...A...... | ..........&#10;&#10;step=7, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;....OOOOO&gt; | .A.....OO&gt;&#10;...A...... | ..........&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testGrow" classname="snake.basic.GrowthTests" time="0.038">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: After eating the apple, the snake should grow by one cell per step, for three steps. This&#10;means that the tail should not be shortened for three steps. The new food should be placed as soon&#10;as the previous food is eaten. The snake should grow after eating the apple, it should not&#10;already have grown in the frame where the head of the snake eats the apple (and a new apple is&#10;placed).&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=1, actions=&lt;&gt;&#10;Want       | Got ✓     &#10;-----------------------&#10;OO&gt;.A..... | OO&gt;.A.....&#10;.......... | ..........&#10;&#10;step=1, rand=1, actions=&lt;Step&gt;&#10;Want       | Got ✓     &#10;-----------------------&#10;.OO&gt;A..... | .OO&gt;A.....&#10;.......... | ..........&#10;&#10;step=2, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OO&gt;..... | .AOO&gt;.....&#10;...A...... | ..........&#10;&#10;step=3, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OOO&gt;.... | .AOOO&gt;....&#10;...A...... | ..........&#10;&#10;step=4, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OOOO&gt;... | .AOOOO&gt;...&#10;...A...... | ..........&#10;&#10;step=5, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;..OOOOO&gt;.. | .AOOOOO&gt;..&#10;...A...... | ..........&#10;&#10;step=6, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;...OOOOO&gt;. | .A.OOOOO&gt;.&#10;...A...... | ..........&#10;&#10;step=7, rand=10, actions=&lt;Step&gt;&#10;Want       | Got ✗     &#10;-----------------------&#10;....OOOOO&gt; | .A..OOOOO&gt;&#10;...A...... | ..........&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: After eating the apple, the snake should grow by one cell per step, for three steps. This
 means that the tail should not be shortened for three steps. The new food should be placed as soon
 as the previous food is eaten. The snake should grow after eating the apple, it should not
@@ -12,15 +12,15 @@ placed).
 This is what went wrong:
 
 step=0, rand=1, actions=&lt;&gt;
-Want       | Got ✗     
+Want       | Got ✓     
 -----------------------
-OO&gt;.A..... | O.&gt;.......
+OO&gt;.A..... | OO&gt;.A.....
 .......... | ..........
 
 step=1, rand=1, actions=&lt;Step&gt;
-Want       | Got ✗     
+Want       | Got ✓     
 -----------------------
-.OO&gt;A..... | ..O&gt;......
+.OO&gt;A..... | .OO&gt;A.....
 .......... | ..........
 
 step=2, rand=10, actions=&lt;Step&gt;
@@ -32,31 +32,31 @@ Want       | Got ✗
 step=3, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-..OOO&gt;.... | .A.OO&gt;....
+..OOO&gt;.... | .AOOO&gt;....
 ...A...... | ..........
 
 step=4, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-..OOOO&gt;... | .A..OO&gt;...
+..OOOO&gt;... | .AOOOO&gt;...
 ...A...... | ..........
 
 step=5, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-..OOOOO&gt;.. | .A...OO&gt;..
+..OOOOO&gt;.. | .AOOOOO&gt;..
 ...A...... | ..........
 
 step=6, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-...OOOOO&gt;. | .A....OO&gt;.
+...OOOOO&gt;. | .A.OOOOO&gt;.
 ...A...... | ..........
 
 step=7, rand=10, actions=&lt;Step&gt;
 Want       | Got ✗     
 -----------------------
-....OOOOO&gt; | .A.....OO&gt;
+....OOOOO&gt; | .A..OOOOO&gt;
 ...A...... | ..........
 
 
@@ -143,77 +143,77 @@ Want       | Got ✗
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testGrowTwice" classname="snake.basic.GrowthTests" time="0.034">
-    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: If a new apple is eaten before the snake has fully grown from the last apple, the effect is&#10;stacked.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;OO&gt;A.......... | .O&gt;...........&#10;.............. | ..............&#10;&#10;step=1, rand=2, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OO&gt;.A........ | AOO&gt;..........&#10;.............. | ..............&#10;&#10;step=2, rand=2, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOO&gt;A........ | A.OO&gt;.........&#10;.............. | ..............&#10;&#10;step=3, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOO&gt;........ | A..OO&gt;........&#10;.A............ | ..............&#10;&#10;step=4, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOO&gt;....... | A...OO&gt;.......&#10;.A............ | ..............&#10;&#10;step=5, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOOO&gt;...... | A....OO&gt;......&#10;.A............ | ..............&#10;&#10;step=6, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOOOO&gt;..... | A.....OO&gt;.....&#10;.A............ | ..............&#10;&#10;step=7, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOOOOO&gt;.... | A......OO&gt;....&#10;.A............ | ..............&#10;&#10;step=8, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;..OOOOOOOO&gt;... | A.......OO&gt;...&#10;.A............ | ..............&#10;&#10;step=9, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;...OOOOOOOO&gt;.. | A........OO&gt;..&#10;.A............ | ..............&#10;&#10;step=10, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;....OOOOOOOO&gt;. | A.........OO&gt;.&#10;.A............ | ..............&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+  <testcase name="testGrowTwice" classname="snake.basic.GrowthTests" time="0.036">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: If a new apple is eaten before the snake has fully grown from the last apple, the effect is&#10;stacked.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want           | Got ✓         &#10;-------------------------------&#10;OO&gt;A.......... | OO&gt;A..........&#10;.............. | ..............&#10;&#10;step=1, rand=2, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OO&gt;.A........ | OOA&gt;..........&#10;.............. | ..............&#10;&#10;step=2, rand=2, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOO&gt;A........ | OOAO&gt;.........&#10;.............. | ..............&#10;&#10;step=3, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOO&gt;........ | OOAOO&gt;........&#10;.A............ | ..............&#10;&#10;step=4, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOO&gt;....... | .OAOOO&gt;.......&#10;.A............ | ..............&#10;&#10;step=5, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOOO&gt;...... | ..AOOOO&gt;......&#10;.A............ | ..............&#10;&#10;step=6, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOOOO&gt;..... | ..AOOOOO&gt;.....&#10;.A............ | ..............&#10;&#10;step=7, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;.OOOOOOOO&gt;.... | ..A.OOOOO&gt;....&#10;.A............ | ..............&#10;&#10;step=8, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;..OOOOOOOO&gt;... | ..A..OOOOO&gt;...&#10;.A............ | ..............&#10;&#10;step=9, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;...OOOOOOOO&gt;.. | ..A...OOOOO&gt;..&#10;.A............ | ..............&#10;&#10;step=10, rand=10, actions=&lt;Step&gt;&#10;Want           | Got ✗         &#10;-------------------------------&#10;....OOOOOOOO&gt;. | ..A....OOOOO&gt;.&#10;.A............ | ..............&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: If a new apple is eaten before the snake has fully grown from the last apple, the effect is
 stacked.
 --------------------------------------------------------------------------------
 This is what went wrong:
 
 step=0, rand=0, actions=&lt;&gt;
-Want           | Got ✗         
+Want           | Got ✓         
 -------------------------------
-OO&gt;A.......... | .O&gt;...........
+OO&gt;A.......... | OO&gt;A..........
 .............. | ..............
 
 step=1, rand=2, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OO&gt;.A........ | AOO&gt;..........
+.OO&gt;.A........ | OOA&gt;..........
 .............. | ..............
 
 step=2, rand=2, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOO&gt;A........ | A.OO&gt;.........
+.OOO&gt;A........ | OOAO&gt;.........
 .............. | ..............
 
 step=3, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOO&gt;........ | A..OO&gt;........
+.OOOO&gt;........ | OOAOO&gt;........
 .A............ | ..............
 
 step=4, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOO&gt;....... | A...OO&gt;.......
+.OOOOO&gt;....... | .OAOOO&gt;.......
 .A............ | ..............
 
 step=5, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOOO&gt;...... | A....OO&gt;......
+.OOOOOO&gt;...... | ..AOOOO&gt;......
 .A............ | ..............
 
 step=6, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOOOO&gt;..... | A.....OO&gt;.....
+.OOOOOOO&gt;..... | ..AOOOOO&gt;.....
 .A............ | ..............
 
 step=7, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-.OOOOOOOO&gt;.... | A......OO&gt;....
+.OOOOOOOO&gt;.... | ..A.OOOOO&gt;....
 .A............ | ..............
 
 step=8, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-..OOOOOOOO&gt;... | A.......OO&gt;...
+..OOOOOOOO&gt;... | ..A..OOOOO&gt;...
 .A............ | ..............
 
 step=9, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-...OOOOOOOO&gt;.. | A........OO&gt;..
+...OOOOOOOO&gt;.. | ..A...OOOOO&gt;..
 .A............ | ..............
 
 step=10, rand=10, actions=&lt;Step&gt;
 Want           | Got ✗         
 -------------------------------
-....OOOOOOOO&gt;. | A.........OO&gt;.
+....OOOOOOOO&gt;. | ..A....OOOOO&gt;.
 .A............ | ..............
 
 
@@ -300,6 +300,23 @@ Want           | Got ✗
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <system-out><![CDATA[The apple location is Point(4,0)
+The apple location is Point(4,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(1,0)
+The apple location is Point(3,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+The apple location is Point(2,0)
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
