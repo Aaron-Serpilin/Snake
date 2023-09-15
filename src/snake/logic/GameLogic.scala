@@ -24,14 +24,14 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
 
   def step(): Unit = {
 
-    if (collisionDetector()) {
-      gameConcluded = true
-    }
-
     if (!gameConcluded) {
 
       headPosition = snakeMovement(headPosition, currentDirection)
       snakeBody = headPosition :: snakeBody.take(snakeLength - 1)
+      
+      if (collisionDetector()) {
+        gameConcluded = true
+      }
 
       if (hasAppleBeenEaten()) {
         applePosition = appleGenerator()
