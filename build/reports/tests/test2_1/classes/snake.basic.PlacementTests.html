@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.187s</div>
+<div class="counter">0.156s</div>
 <p>duration</p>
 </div>
 </td>
@@ -65,9 +65,6 @@
 </li>
 <li>
 <a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
@@ -97,102 +94,29 @@ Want   | Got ✓
 ..OO&gt;A | ..OO&gt;A
 
 step=3, rand=2, actions=&lt;Step&gt;
-Want   | Got ✗                                                                                                                                    
---------------------------------------------------------------------------------------------------------------------------------------------------
-..AOO&gt; | LogicFailed(java.lang.ArithmeticException: / by zero                                                                                     
-       | 	at generic.TestRandomGen.randomInt(TestRandomGen.scala:17)                                                                              
-       | 	at snake.logic.GameLogic.step(GameLogic.scala:33)                                                                                       
-       | 	at snake.SnakeLogicWrapper.performAction(SnakeTestSuiteBase.scala:51)                                                                   
-       | 	at snake.SnakeLogicWrapper.performAction(SnakeTestSuiteBase.scala:46)                                                                   
-       | 	at generic.GameTestSuite.$anonfun$performActionsAndGetDisplay$1(GameTestSuite.scala:150)                                                
-       | 	at generic.GameTestSuite.$anonfun$performActionsAndGetDisplay$1$adapted(GameTestSuite.scala:150)                                        
-       | 	at scala.collection.immutable.List.foreach(List.scala:333)                                                                              
-       | 	at generic.GameTestSuite.performActionsAndGetDisplay(GameTestSuite.scala:150)                                                           
-       | 	at generic.GameTestSuite$TestRecording.$anonfun$implementationDisplays$2(GameTestSuite.scala:197)                                       
-       | 	at generic.GameTestSuite$TestRecording.catchLogicError$1(GameTestSuite.scala:182)                                                       
-       | 	at generic.GameTestSuite$TestRecording.liftedTree1$1(GameTestSuite.scala:197)                                                           
-       | 	at generic.GameTestSuite$TestRecording.implementationDisplays$lzycompute(GameTestSuite.scala:187)                                       
-       | 	at generic.GameTestSuite$TestRecording.implementationDisplays(GameTestSuite.scala:178)                                                  
-       | 	at generic.GameTestSuite$TestRecording.passes$lzycompute(GameTestSuite.scala:208)                                                       
-       | 	at generic.GameTestSuite$TestRecording.passes(GameTestSuite.scala:207)                                                                  
-       | 	at generic.GameTestSuite.checkGame(GameTestSuite.scala:290)                                                                             
-       | 	at snake.SnakeTestSuiteBase.checkGame(SnakeTestSuiteBase.scala:102)                                                                     
-       | 	at snake.basic.PlacementTests.$anonfun$new$4(PlacementTests.scala:64)                                                                   
-       | 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)                                                              
-       | 	at infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)                                                                           
-       | 	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)                                                                                
-       | 	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)                                                                               
-       | 	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)                                                                              
-       | 	at org.scalatest.Transformer.apply(Transformer.scala:22)                                                                                
-       | 	at org.scalatest.Transformer.apply(Transformer.scala:20)                                                                                
-       | 	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)                                                                     
-       | 	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)                                                                             
-       | 	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)                                                                            
-       | 	at infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)                               
-       | 	at org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)                                         
-       | 	at org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)                                                                   
-       | 	at org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)                                                              
-       | 	at org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)                                                             
-       | 	at org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)                                                             
-       | 	at org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)                                                    
-       | 	at org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)                                                   
-       | 	at infrastructure.TestBase.withFixture(TestBase.scala:9)                                                                                
-       | 	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)                                                               
-       | 	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)                                                                
-       | 	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)                                                                              
-       | 	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)                                                                           
-       | 	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)                                                                          
-       | 	at org.scalatest.FunSuite.runTest(FunSuite.scala:1560)                                                                                  
-       | 	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)                                                               
-       | 	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)                                                              
-       | 	at scala.collection.immutable.List.foreach(List.scala:333)                                                                              
-       | 	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)                                                                       
-       | 	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)                                                                         
-       | 	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)                                                                             
-       | 	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)                                                                          
-       | 	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)                                                                         
-       | 	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)                                                                                 
-       | 	at org.scalatest.Suite.run(Suite.scala:1124)                                                                                            
-       | 	at org.scalatest.Suite.run$(Suite.scala:1106)                                                                                           
-       | 	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)                                                    
-       | 	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)                                                                    
-       | 	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)                                                                                  
-       | 	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)                                                                               
-       | 	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)                                                                              
-       | 	at infrastructure.TestBase.run(TestBase.scala:26)                                                                                       
-       | 	at org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)                                                                           
-       | 	at org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)                                                                     
-       | 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)                                                                    
-       | 	at org.scalatest.Suite.runNestedSuites(Suite.scala:1232)                                                                                
-       | 	at org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)                                                                               
-       | 	at org.scalatest.Suites.runNestedSuites(Suites.scala:56)                                                                                
-       | 	at org.scalatest.Suite.run(Suite.scala:1121)                                                                                            
-       | 	at org.scalatest.Suite.run$(Suite.scala:1106)                                                                                           
-       | 	at snake.SnakeTestSuite.runDirect(SnakeTestSuite.scala:24)                                                                              
-       | 	at snake.SnakeTestSuite.run(SnakeTestSuite.scala:16)                                                                                    
-       | 	at org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)                                                                        
-       | 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)                     
-       | 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)                           
-       | 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)                           
-       | 	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-       | 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)                      
-       | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)                                
-       | 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)                                                                           
-       | 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)                                                 
-       | 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)                                                 
-       | 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)                                 
-       | 	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)                  
-       | 	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)                                                                       
-       | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)                                                   
-       | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)                            
-       | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)                                                 
-       | 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)                                                  
-       | 	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)                                
-       | 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)        
-       | 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)         
-       | 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)                                             
-       | 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)                                            
-       | )                                                                                                                                        
+Want   | Got ✓ 
+---------------
+..AOO&gt; | ..AOO&gt;
+
+step=4, rand=2, actions=&lt;Step&gt;
+Want   | Got ✓ 
+---------------
+&gt;.AOOO | &gt;.AOOO
+
+step=5, rand=2, actions=&lt;Step&gt;
+Want   | Got ✓ 
+---------------
+O&gt;AOOO | O&gt;AOOO
+
+step=6, rand=2, actions=&lt;Step&gt;
+Want   | Got ✓ 
+---------------
+OO&gt;OOO | OO&gt;OOO
+
+step=7, rand=2, actions=&lt;Step&gt;
+Want              | Got ✗ 
+--------------------------
+GameOverDisplay() | OOO&gt;OO
 
 
 	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
@@ -292,34 +216,25 @@ Want   | Got ✗
 </thead>
 <tr>
 <td class="success">testApplePos3</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testApplePos8</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">testNoRoomForApple</td>
-<td class="failures">0.042s</td>
+<td class="failures">0.034s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">testStartCorrectly</td>
-<td class="success">0.137s</td>
+<td class="success">0.118s</td>
 <td class="success">passed</td>
 </tr>
 </table>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>The apple location is Point(5,0)
-The apple location is Point(5,0)
-The apple location is Point(5,0)
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -329,7 +244,7 @@ The apple location is Point(5,0)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 13, 2023, 6:13:00 PM</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 15, 2023, 1:32:48 PM</p>
 </div>
 </div>
 </body>
