@@ -7,13 +7,11 @@ import snake.logic.GameLogic._
 class GameLogic(val random: RandomGenerator,
                 val gridDims: Dimensions) {
   private var currentDirection: Direction = East()
-  private var xHeadPosition = 2
-  private var yHeadPosition = 0
-  private var headPosition = Point(xHeadPosition, yHeadPosition)
+  private var headPosition = Point(2, 0)
   private var snakeBody: List[Point] = List (//Initially define the snake to have a head and two body parts
     headPosition,
-    Point(xHeadPosition - 1, yHeadPosition),
-    Point(xHeadPosition - 2, yHeadPosition)
+    Point(headPosition.x - 1, headPosition.y),
+    Point(headPosition.x - 2, headPosition.y)
   )
   var snakeLength = snakeBody.length
   var entireGrid: Seq[Point] = Seq()
@@ -25,17 +23,20 @@ class GameLogic(val random: RandomGenerator,
   def gameOver: Boolean = gameConcluded
 
   def step(): Unit = {
-    //println(s"The apple location is ${applePosition}")
-    if (collisionDetector()) {gameConcluded = true}
-    headPosition = snakeMovement(headPosition, currentDirection)
-    xHeadPosition = headPosition.x
-    yHeadPosition = headPosition.y
 
-    snakeBody = headPosition :: snakeBody.take(snakeLength - 1)
+    if (!gameConcluded) {
 
-    if (hasAppleBeenEaten()) {
-      applePosition = appleGenerator()
-      snakeLength += 3 //We increase the snake length so that every step a new element is added to the body. This way the snake increases a block during each step and not all at once
+      if (collisionDetector()) {
+        gameConcluded = true
+      }
+
+      headPosition = snakeMovement(headPosition, currentDirection)
+      snakeBody = headPosition :: snakeBody.take(snakeLength - 1)
+
+      if (hasAppleBeenEaten()) {
+        applePosition = appleGenerator()
+        snakeLength += 3 //We increase the snake length so that every step a new element is added to the body. This way the snake increases a block during each step and not all at once
+      }
     }
 
   }
@@ -99,10 +100,8 @@ class GameLogic(val random: RandomGenerator,
     //println(s"The number of empty cells is ${emptyCells.length}")
     if (emptyCells.nonEmpty) { //Applies when there are available free cells
       val randomIndex = random.randomInt(emptyCells.length)
-      //println(s"The index is ${randomIndex}")
       emptyCells(randomIndex)
     } else { //Applies when there is no place for the apple to spawn
-      //println("-1 invoked")
       Point(-1, -1)
     }
   }
@@ -117,9 +116,9 @@ class GameLogic(val random: RandomGenerator,
 
 /** GameLogic companion object */
 object GameLogic {
-  val FramesPerSecond: Int = 1
+  val FramesPerSecond: Int = 4
   val DrawSizeFactor = 1.0
   val DefaultGridDims
   : Dimensions =
-  Dimensions(width = 6, height = 1)
+  Dimensions(width = 10, height = 10)
 }

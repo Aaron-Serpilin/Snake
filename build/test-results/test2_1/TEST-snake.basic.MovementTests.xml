@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.MovementTests" tests="5" skipped="0" failures="1" errors="0" timestamp="2023-09-15T11:32:47" hostname="Jays-MacBook-Pro-2.local" time="0.066">
+<testsuite name="snake.basic.MovementTests" tests="5" skipped="0" failures="1" errors="0" timestamp="2023-09-15T11:54:03" hostname="Jays-MacBook-Pro-2.local" time="0.076">
   <properties/>
-  <testcase name="testMove" classname="snake.basic.MovementTests" time="0.005"/>
-  <testcase name="testChangeDirs" classname="snake.basic.MovementTests" time="0.019"/>
-  <testcase name="testIgnoreEatHead" classname="snake.basic.MovementTests" time="0.013"/>
-  <testcase name="testQuickSwitch" classname="snake.basic.MovementTests" time="0.01">
+  <testcase name="testMove" classname="snake.basic.MovementTests" time="0.007"/>
+  <testcase name="testChangeDirs" classname="snake.basic.MovementTests" time="0.018"/>
+  <testcase name="testIgnoreEatHead" classname="snake.basic.MovementTests" time="0.016"/>
+  <testcase name="testQuickSwitch" classname="snake.basic.MovementTests" time="0.019">
     <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: It should not be possible to crash into yourself by changing the direction multiple times&#10;before the next step. For example, if the snake came from the west, and the we changed the current&#10;direction to north, it still should not be possible to change the direction to to west before&#10;taking a step.&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=4, actions=&lt;&gt;&#10;Want | Got ✓&#10;------------&#10;OO&gt;. | OO&gt;. &#10;...A | ...A &#10;.... | .... &#10;&#10;step=1, rand=4, actions=&lt;Step&gt;&#10;Want | Got ✓&#10;------------&#10;.OO&gt; | .OO&gt; &#10;...A | ...A &#10;.... | .... &#10;&#10;step=2, rand=4, actions=&lt;ChangeDir(North()), ChangeDir(West()), Step&gt;&#10;Want | Got ✗&#10;------------&#10;..OO | ..&lt;O &#10;...A | ...A &#10;...^ | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
 Hint: It should not be possible to crash into yourself by changing the direction multiple times
 before the next step. For example, if the snake came from the west, and the we changed the current
@@ -118,7 +118,7 @@ Want | Got ✗
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testQuickSwitch2" classname="snake.basic.MovementTests" time="0.014"/>
+  <testcase name="testQuickSwitch2" classname="snake.basic.MovementTests" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
