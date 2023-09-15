@@ -4,8 +4,7 @@ import engine.random.{RandomGenerator, ScalaRandomGen}
 import snake.game.SnakeGame
 import snake.logic.GameLogic._
 
-class GameLogic(val random: RandomGenerator,
-                val gridDims: Dimensions) {
+class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   private var currentDirection: Direction = East()
   private var headPosition = Point(2, 0)
   private var snakeBody: List[Point] = List (//Initially define the snake to have a head and two body parts
@@ -18,17 +17,18 @@ class GameLogic(val random: RandomGenerator,
   var emptyCells: List[Point] = List()
   private var applePosition = appleGenerator()
   private var gameConcluded = false
+  private var validMove = false
 
 
   def gameOver: Boolean = gameConcluded
 
   def step(): Unit = {
 
-    if (!gameConcluded) {
+    if (collisionDetector()) {
+      gameConcluded = true
+    }
 
-      if (collisionDetector()) {
-        gameConcluded = true
-      }
+    if (!gameConcluded) {
 
       headPosition = snakeMovement(headPosition, currentDirection)
       snakeBody = headPosition :: snakeBody.take(snakeLength - 1)
@@ -39,26 +39,25 @@ class GameLogic(val random: RandomGenerator,
       }
     }
 
+    validMove = false
   }
 
   def setReverse(r: Boolean): Unit = ()
 
   def changeDir(d: Direction): Unit = {
-    if (!oppositeDirectionDetector(d, currentDirection)) {
-      currentDirection = d
-    }
+      if (!validMove) {
+        validMove = true
+        oppositeDirectionDetector(d)
+      }
   }
 
-  private def oppositeDirectionDetector(previousDirection: Direction, currentDirection: Direction): Boolean = {
-    (previousDirection, currentDirection) match {
-      case (East(), West()) => true
-      case (West(), East()) => true
-      case (North(), South()) => true
-      case (South(), North()) => true
-      case _ => false
+  private def oppositeDirectionDetector(direction: Direction): Unit = {
+    if (currentDirection != direction.opposite) {
+      currentDirection = direction
+    } else {
+      validMove = false
     }
   }
-
 
   def getCellType(p: Point): CellType = {
     if (headPosition == p) {
@@ -72,10 +71,6 @@ class GameLogic(val random: RandomGenerator,
     } else {
       Empty()
     }
-
-//    else if (hasAppleBeenEaten()) {
-//      SnakeHead(currentDirection)
-//    }
   }
 
   private def snakeMovement(position: Point, direction: Direction): Point = {
@@ -97,7 +92,6 @@ class GameLogic(val random: RandomGenerator,
   private def appleGenerator(): Point = {
     entireGrid = gridDims.allPointsInside
     emptyCells = entireGrid.filterNot(p => snakeBody.contains(p)).toList
-    //println(s"The number of empty cells is ${emptyCells.length}")
     if (emptyCells.nonEmpty) { //Applies when there are available free cells
       val randomIndex = random.randomInt(emptyCells.length)
       emptyCells(randomIndex)
@@ -106,15 +100,12 @@ class GameLogic(val random: RandomGenerator,
     }
   }
 
-
   private def collisionDetector(): Boolean = {
     if (snakeBody.tail.contains(headPosition)) {return true}
     false
   }
 }
 
-
-/** GameLogic companion object */
 object GameLogic {
   val FramesPerSecond: Int = 4
   val DrawSizeFactor = 1.0
