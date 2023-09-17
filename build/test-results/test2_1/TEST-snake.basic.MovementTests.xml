@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.MovementTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-15T12:14:42" hostname="Jays-MacBook-Pro-2.local" time="0.043">
+<testsuite name="snake.basic.MovementTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-17T19:25:14" hostname="Jays-MacBook-Pro-2.local" time="0.046">
   <properties/>
-  <testcase name="testMove" classname="snake.basic.MovementTests" time="0.004"/>
-  <testcase name="testChangeDirs" classname="snake.basic.MovementTests" time="0.01"/>
-  <testcase name="testIgnoreEatHead" classname="snake.basic.MovementTests" time="0.007"/>
-  <testcase name="testQuickSwitch" classname="snake.basic.MovementTests" time="0.011"/>
-  <testcase name="testQuickSwitch2" classname="snake.basic.MovementTests" time="0.007"/>
+  <testcase name="testMove" classname="snake.basic.MovementTests" time="0.006"/>
+  <testcase name="testChangeDirs" classname="snake.basic.MovementTests" time="0.015"/>
+  <testcase name="testIgnoreEatHead" classname="snake.basic.MovementTests" time="0.008"/>
+  <testcase name="testQuickSwitch" classname="snake.basic.MovementTests" time="0.008"/>
+  <testcase name="testQuickSwitch2" classname="snake.basic.MovementTests" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
