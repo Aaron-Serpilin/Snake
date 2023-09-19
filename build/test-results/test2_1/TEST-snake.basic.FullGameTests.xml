@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.FullGameTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-09-17T19:25:14" hostname="Jays-MacBook-Pro-2.local" time="0.133">
+<testsuite name="snake.basic.FullGameTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-09-19T12:23:10" hostname="Jays-MacBook-Pro-2.local" time="0.121">
   <properties/>
-  <testcase name="testGame3x1" classname="snake.basic.FullGameTests" time="0.003"/>
-  <testcase name="testGame6x6" classname="snake.basic.FullGameTests" time="0.022"/>
-  <testcase name="testGame6x3" classname="snake.basic.FullGameTests" time="0.005"/>
-  <testcase name="testGame10x7" classname="snake.basic.FullGameTests" time="0.055"/>
-  <testcase name="testInterleave6x3and10x7" classname="snake.basic.FullGameTests" time="0.026"/>
-  <testcase name="testInterleave6x6and10x7" classname="snake.basic.FullGameTests" time="0.011"/>
+  <testcase name="testGame3x1" classname="snake.basic.FullGameTests" time="0.002"/>
+  <testcase name="testGame6x6" classname="snake.basic.FullGameTests" time="0.015"/>
+  <testcase name="testGame6x3" classname="snake.basic.FullGameTests" time="0.011"/>
+  <testcase name="testGame10x7" classname="snake.basic.FullGameTests" time="0.043"/>
+  <testcase name="testInterleave6x3and10x7" classname="snake.basic.FullGameTests" time="0.022"/>
+  <testcase name="testInterleave6x6and10x7" classname="snake.basic.FullGameTests" time="0.016"/>
   <testcase name="testInterleave6x3and6x6" classname="snake.basic.FullGameTests" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

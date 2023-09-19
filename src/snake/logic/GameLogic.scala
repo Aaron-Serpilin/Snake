@@ -13,9 +13,9 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
     Point(headPosition.x - 1, headPosition.y),
     Point(headPosition.x - 2, headPosition.y)
   )
-  var snakeLength = snakeBody.length
-  var entireGrid: Seq[Point] = Seq()
-  var emptyCells: List[Point] = List()
+  private var snakeLength = snakeBody.length
+  private var entireGrid: Seq[Point] = Seq()
+  private var emptyCells: List[Point] = List()
   private var applePosition = appleGenerator()
   private var gameConcluded = false
   private var directionChanged = false
@@ -23,21 +23,22 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   def gameOver: Boolean = gameConcluded
 
   def step(): Unit = {
-    if (!gameConcluded) {
 
-      oppositeDirectionDetector()
-      headPosition = snakeMovement(headPosition, currentDirection)
-      snakeBody = headPosition :: snakeBody.take(snakeLength - 1)
+    if (gameConcluded) {return}
 
-      if (collisionDetector()) {
-        gameConcluded = true
-      }
+    oppositeDirectionDetector()
+    headPosition = snakeMovement(headPosition, currentDirection)
+    snakeBody = headPosition :: snakeBody.take(snakeLength - 1) // Following the length's increase, body elements are added in each step until the length has been met
 
-      if (hasAppleBeenEaten()) {
-        applePosition = appleGenerator()
-        snakeLength += 3 //We increase the snake length so that every step a new element is added to the body. This way the snake increases a block during each step and not all at once
-      }
+    if (collisionDetector()) {
+      gameConcluded = true
     }
+
+    if (hasAppleBeenEaten()) {
+      applePosition = appleGenerator()
+      snakeLength += 3 //We increase the snake length so that every step a new element is added to the body. This way the snake increases a block during each step and not all at once
+    }
+
   }
 
   def setReverse(r: Boolean): Unit = ()
