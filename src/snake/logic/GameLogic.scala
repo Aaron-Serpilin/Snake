@@ -30,57 +30,50 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
     gameConcluded = false,
     directionChanged = false
   )
-//  private var gameStateStack: SStack[GameState] = SStack()
-//  private var reverseModeEnabled: Boolean = false
+  private var gameStateStack: SStack[GameState] = SStack()
+  private var reverseModeEnabled: Boolean = false
   currentGameState = currentGameState.copy(applePosition = appleGenerator())
+  gameStateStack = gameStateStack.push(currentGameState.copy())
 
   def gameOver: Boolean = currentGameState.gameConcluded
 
   def setReverse(r: Boolean): Unit = {
-//    if (r) {
-//      gameStateStack = gameStateStack.push(GameState(headPosition, snakeBody, snakeLength, applePosition, currentDirection, lastValidDirection, entireGrid, emptyCells, gameConcluded, directionChanged))
-//    } else {
-//      gameStateStack = SStack() // Clear the stack by creating a new empty SStack
-//    }
-//    reverseModeEnabled = r
+    reverseModeEnabled = r
   }
-//
-//  def rewindGameState(): Unit = {
-//    if (reverseModeEnabled && !gameStateStack.isEmpty) {
-//      val prevState = gameStateStack.top
-//      snakeBody = prevState.snakeBody
-//      snakeLength = prevState.snakeLength
-//      applePosition = prevState.applePosition
-//      gameConcluded = false
-//      gameStateStack = gameStateStack.pop // Update the stack by removing the top element
-//    }
-//  }
 
   def step(): Unit = {
-//    if (reverseModeEnabled) {
-//      rewindGameState()
-//    }
 
-    if (currentGameState.gameConcluded) {
-      return
+    if (reverseModeEnabled) {
+
+      if (!gameStateStack.isEmpty) {
+        gameStateStack = gameStateStack.pop
+        currentGameState = gameStateStack.top
+      }
+
+
+    } else {
+
+      if (currentGameState.gameConcluded) {
+        return
+      }
+
+      oppositeDirectionDetector()
+      currentGameState = currentGameState.copy(headPosition = snakeMovement(currentGameState.headPosition, currentGameState.currentDirection))
+      currentGameState = currentGameState.copy(snakeBody = currentGameState.headPosition :: currentGameState.snakeBody.take(currentGameState.snakeLength - 1))
+
+      if (collisionDetector()) {
+        currentGameState = currentGameState.copy(gameConcluded = true)
+      }
+
+      if (hasAppleBeenEaten()) {
+        currentGameState = currentGameState.copy(applePosition = appleGenerator())
+        currentGameState = currentGameState.copy(snakeLength = currentGameState.snakeLength + 3)
+      }
+
+      gameStateStack = gameStateStack.push(currentGameState.copy())
+
     }
 
-    oppositeDirectionDetector()
-    currentGameState = currentGameState.copy(headPosition = snakeMovement(currentGameState.headPosition, currentGameState.currentDirection))
-    currentGameState = currentGameState.copy(snakeBody = currentGameState.headPosition :: currentGameState.snakeBody.take(currentGameState.snakeLength - 1))
-
-    if (collisionDetector()) {
-      currentGameState = currentGameState.copy(gameConcluded = true)
-    }
-
-    if (hasAppleBeenEaten()) {
-      currentGameState = currentGameState.copy(applePosition = appleGenerator())
-      currentGameState = currentGameState.copy(snakeLength = currentGameState.snakeLength + 3)
-    }
-
-//    if (reverseModeEnabled) {
-//      gameStateStack = gameStateStack.push(GameState(currentGameState.headPosition, currentGameState.snakeBody, currentGameState.snakeLength, currentGameState.applePosition, currentGameState.currentDirection, currentGameState.lastValidDirection, currentGameState.entireGrid, currentGameState.emptyCells, currentGameState.gameConcluded, currentGameState.directionChanged))
-//    }
   }
 
   def changeDir(d: Direction): Unit = {
@@ -150,7 +143,7 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
 }
 
 object GameLogic {
-  val FramesPerSecond: Int = 4
+  val FramesPerSecond: Int = 5
   val DrawSizeFactor = 1.0
-  val DefaultGridDims: Dimensions = Dimensions(width = 10, height = 10)
+  val DefaultGridDims: Dimensions = Dimensions(width = 15, height = 15)
 }

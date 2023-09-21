@@ -1,7 +1,6 @@
 package snake.logic
 
 // Immutable stack structure given by the Sokoban logic file
-
 case class SStack[A](l : List[A]) {
   def size: Int = l.length
   def isEmpty: Boolean = l.isEmpty
