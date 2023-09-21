@@ -4,108 +4,98 @@ import engine.random.{RandomGenerator, ScalaRandomGen}
 import snake.game.SnakeGame
 import snake.logic.GameLogic._
 
-// Immutable stack structure given by the Sokoban logic file
-case class SStack[A](l : List[A]) {
-  def size : Int = l.length
-  def isEmpty : Boolean = l.isEmpty
-  def top : A = l.head
-  def pop : SStack[A] = SStack(l.tail)
-  def push(a : A) : SStack[A] = SStack(a :: l)
-}
-
-object SStack {
-  def apply[A](a: A): SStack[A] = SStack(List(a))
-  def apply[A](): SStack[A] = SStack(List())
-}
-
 case class GameState(
+                      headPosition: Point,
                       snakeBody: List[Point],
                       snakeLength: Int,
-                      applePosition: Point
+                      applePosition: Point,
+                      currentDirection: Direction,
+                      lastValidDirection: Direction,
+                      emptyCells: List[Point],
+                      gameConcluded: Boolean,
+                      directionChanged: Boolean
                     )
 
 class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
-  private var currentDirection: Direction = East()
-  private var lastValidDirection: Direction = currentDirection
-  private var headPosition = Point(2, 0)
-  private var snakeBody: List[Point] = List(
-    headPosition,
-    Point(headPosition.x - 1, headPosition.y),
-    Point(headPosition.x - 2, headPosition.y)
+
+  // The only mutable elements. Variables for the gameState and reverse mode
+  private var currentGameState: GameState = GameState(
+    headPosition = Point(2, 0),
+    snakeBody = List(Point(2, 0), Point(1, 0), Point(0, 0)),
+    snakeLength = 3,
+    applePosition = Point(-1, -1),
+    currentDirection = East(),
+    lastValidDirection = East(),
+    emptyCells = List(),
+    gameConcluded = false,
+    directionChanged = false
   )
-  private var snakeLength = snakeBody.length
-  private var entireGrid: Seq[Point] = Seq()
-  private var emptyCells: List[Point] = List()
-  private var applePosition = appleGenerator()
-  private var gameConcluded = false
-  private var directionChanged = false
+//  private var gameStateStack: SStack[GameState] = SStack()
+//  private var reverseModeEnabled: Boolean = false
+  currentGameState = currentGameState.copy(applePosition = appleGenerator())
 
-  // Variables for the gameState and reverse mode
-  private var gameStateStack: SStack[GameState] = SStack()
-  private var reverseModeEnabled: Boolean = false
-
-  def gameOver: Boolean = gameConcluded
+  def gameOver: Boolean = currentGameState.gameConcluded
 
   def setReverse(r: Boolean): Unit = {
-    if (r) {
-      gameStateStack = gameStateStack.push(GameState(snakeBody, snakeLength, applePosition))
-    } else {
-      gameStateStack = SStack() // Clear the stack by creating a new empty SStack
-    }
-    reverseModeEnabled = r
+//    if (r) {
+//      gameStateStack = gameStateStack.push(GameState(headPosition, snakeBody, snakeLength, applePosition, currentDirection, lastValidDirection, entireGrid, emptyCells, gameConcluded, directionChanged))
+//    } else {
+//      gameStateStack = SStack() // Clear the stack by creating a new empty SStack
+//    }
+//    reverseModeEnabled = r
   }
-
-  def rewindGameState(): Unit = {
-    if (reverseModeEnabled && !gameStateStack.isEmpty) {
-      val prevState = gameStateStack.top
-      snakeBody = prevState.snakeBody
-      snakeLength = prevState.snakeLength
-      applePosition = prevState.applePosition
-      gameConcluded = false
-      gameStateStack = gameStateStack.pop // Update the stack by removing the top element
-    }
-  }
+//
+//  def rewindGameState(): Unit = {
+//    if (reverseModeEnabled && !gameStateStack.isEmpty) {
+//      val prevState = gameStateStack.top
+//      snakeBody = prevState.snakeBody
+//      snakeLength = prevState.snakeLength
+//      applePosition = prevState.applePosition
+//      gameConcluded = false
+//      gameStateStack = gameStateStack.pop // Update the stack by removing the top element
+//    }
+//  }
 
   def step(): Unit = {
-    if (reverseModeEnabled) {
-      rewindGameState()
-    }
+//    if (reverseModeEnabled) {
+//      rewindGameState()
+//    }
 
-    if (gameConcluded) {
+    if (currentGameState.gameConcluded) {
       return
     }
 
     oppositeDirectionDetector()
-    headPosition = snakeMovement(headPosition, currentDirection)
-    snakeBody = headPosition :: snakeBody.take(snakeLength - 1)
+    currentGameState = currentGameState.copy(headPosition = snakeMovement(currentGameState.headPosition, currentGameState.currentDirection))
+    currentGameState = currentGameState.copy(snakeBody = currentGameState.headPosition :: currentGameState.snakeBody.take(currentGameState.snakeLength - 1))
 
     if (collisionDetector()) {
-      gameConcluded = true
+      currentGameState = currentGameState.copy(gameConcluded = true)
     }
 
     if (hasAppleBeenEaten()) {
-      applePosition = appleGenerator()
-      snakeLength += 3
+      currentGameState = currentGameState.copy(applePosition = appleGenerator())
+      currentGameState = currentGameState.copy(snakeLength = currentGameState.snakeLength + 3)
     }
 
-    if (reverseModeEnabled) {
-      gameStateStack = gameStateStack.push(GameState(snakeBody, snakeLength, applePosition))
-    }
+//    if (reverseModeEnabled) {
+//      gameStateStack = gameStateStack.push(GameState(currentGameState.headPosition, currentGameState.snakeBody, currentGameState.snakeLength, currentGameState.applePosition, currentGameState.currentDirection, currentGameState.lastValidDirection, currentGameState.entireGrid, currentGameState.emptyCells, currentGameState.gameConcluded, currentGameState.directionChanged))
+//    }
   }
 
   def changeDir(d: Direction): Unit = {
-    if (!directionChanged && currentDirection != d.opposite) {
-      lastValidDirection = d
-      directionChanged = true
+    if (!currentGameState.directionChanged && currentGameState.currentDirection != d.opposite) {
+      currentGameState = currentGameState.copy(lastValidDirection = d)
+      currentGameState = currentGameState.copy(directionChanged = true)
     }
   }
 
   private def oppositeDirectionDetector(): Unit = {
-    if (directionChanged) {
-      if (currentDirection != lastValidDirection.opposite) {
-        currentDirection = lastValidDirection
+    if (currentGameState.directionChanged) {
+      if (currentGameState.currentDirection != currentGameState.lastValidDirection.opposite) {
+        currentGameState = currentGameState.copy(currentDirection = currentGameState.lastValidDirection)
       }
-      directionChanged = false
+      currentGameState = currentGameState.copy(directionChanged = false)
     }
   }
 
@@ -119,43 +109,44 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   }
 
   private def hasAppleBeenEaten(): Boolean = {
-    if (headPosition == applePosition) {
+    if (currentGameState.headPosition == currentGameState.applePosition) {
       return true
     }
     false
   }
 
   private def appleGenerator(): Point = {
-    entireGrid = gridDims.allPointsInside
-    emptyCells = entireGrid.filterNot(p => snakeBody.contains(p)).toList
-    if (emptyCells.nonEmpty) {
-      val randomIndex = random.randomInt(emptyCells.length)
-      emptyCells(randomIndex)
+    val entireGrid = gridDims.allPointsInside
+    currentGameState = currentGameState.copy(emptyCells = entireGrid.filterNot(p => currentGameState.snakeBody.contains(p)).toList)
+    if (currentGameState.emptyCells.nonEmpty) {
+      val randomIndex = random.randomInt(currentGameState.emptyCells.length)
+      currentGameState.emptyCells(randomIndex)
     } else {
       Point(-1, -1)
     }
   }
 
   private def collisionDetector(): Boolean = {
-    if (snakeBody.tail.contains(headPosition)) {
+    if (currentGameState.snakeBody.tail.contains(currentGameState.headPosition)) {
       return true
     }
     false
   }
 
   def getCellType(p: Point): CellType = {
-    if (headPosition == p) {
-      SnakeHead(currentDirection)
-    } else if (applePosition == p) {
+    if (currentGameState.headPosition == p) {
+      SnakeHead(currentGameState.currentDirection)
+    } else if (currentGameState.applePosition == p) {
       Apple()
-    } else if (snakeBody.contains(p)) {
-      val snakeBodyIndex = snakeBody.indexOf(p)
-      val colorIndex = snakeBodyIndex.toFloat / (snakeBody.length - 1)
+    } else if (currentGameState.snakeBody.contains(p)) {
+      val snakeBodyIndex = currentGameState.snakeBody.indexOf(p)
+      val colorIndex = snakeBodyIndex.toFloat / (currentGameState.snakeBody.length - 1)
       SnakeBody(colorIndex)
     } else {
       Empty()
     }
   }
+
 }
 
 object GameLogic {
