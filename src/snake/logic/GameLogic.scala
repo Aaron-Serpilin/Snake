@@ -4,6 +4,26 @@ import engine.random.{RandomGenerator, ScalaRandomGen}
 import snake.game.SnakeGame
 import snake.logic.GameLogic._
 
+// Immutable stack structure given by the Sokoban logic file
+case class SStack[A](l : List[A]) {
+  def size : Int = l.length
+  def isEmpty : Boolean = l.isEmpty
+  def top : A = l.head
+  def pop : SStack[A] = SStack(l.tail)
+  def push(a : A) : SStack[A] = SStack(a :: l)
+}
+
+object SStack {
+  def apply[A](a: A): SStack[A] = SStack(List(a))
+  def apply[A](): SStack[A] = SStack(List())
+}
+
+case class GameState(
+                      snakeBody: List[Point],
+                      snakeLength: Int,
+                      applePosition: Point
+                    )
+
 class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   private var currentDirection: Direction = East()
   private var lastValidDirection: Direction = currentDirection
@@ -20,15 +40,44 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   private var gameConcluded = false
   private var directionChanged = false
 
+  // Variables for the gameState and reverse mode
+  private var gameStateStack: SStack[GameState] = SStack()
+  private var reverseModeEnabled: Boolean = false
+
   def gameOver: Boolean = gameConcluded
 
-  def step(): Unit = {
+  def setReverse(r: Boolean): Unit = {
+    if (r) {
+      gameStateStack = gameStateStack.push(GameState(snakeBody, snakeLength, applePosition))
+    } else {
+      gameStateStack = SStack() // Clear the stack by creating a new empty SStack
+    }
+    reverseModeEnabled = r
+  }
 
-    if (gameConcluded) {return}
+  def rewindGameState(): Unit = {
+    if (reverseModeEnabled && !gameStateStack.isEmpty) {
+      val prevState = gameStateStack.top
+      snakeBody = prevState.snakeBody
+      snakeLength = prevState.snakeLength
+      applePosition = prevState.applePosition
+      gameConcluded = false
+      gameStateStack = gameStateStack.pop // Update the stack by removing the top element
+    }
+  }
+
+  def step(): Unit = {
+    if (reverseModeEnabled) {
+      rewindGameState()
+    }
+
+    if (gameConcluded) {
+      return
+    }
 
     oppositeDirectionDetector()
     headPosition = snakeMovement(headPosition, currentDirection)
-    snakeBody = headPosition :: snakeBody.take(snakeLength - 1) // Following the length's increase, body elements are added in each step until the length has been met
+    snakeBody = headPosition :: snakeBody.take(snakeLength - 1)
 
     if (collisionDetector()) {
       gameConcluded = true
@@ -36,12 +85,13 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
 
     if (hasAppleBeenEaten()) {
       applePosition = appleGenerator()
-      snakeLength += 3 //We increase the snake length so that every step a new element is added to the body. This way the snake increases a block during each step and not all at once
+      snakeLength += 3
     }
 
+    if (reverseModeEnabled) {
+      gameStateStack = gameStateStack.push(GameState(snakeBody, snakeLength, applePosition))
+    }
   }
-
-  def setReverse(r: Boolean): Unit = ()
 
   def changeDir(d: Direction): Unit = {
     if (!directionChanged && currentDirection != d.opposite) {
@@ -50,8 +100,8 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
     }
   }
 
-  private def oppositeDirectionDetector () : Unit = {
-    if (directionChanged) { // Triggers when currentDirection != d
+  private def oppositeDirectionDetector(): Unit = {
+    if (directionChanged) {
       if (currentDirection != lastValidDirection.opposite) {
         currentDirection = lastValidDirection
       }
@@ -60,9 +110,9 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   }
 
   private def snakeMovement(position: Point, direction: Direction): Point = {
-    direction match { //The modulo allows for the wraparound since if it surpasses the gridDims, it redefines based on the remainder
-      case East() => Point((position.x + 1) % gridDims.width, position.y)
-      case West() => Point((position.x - 1 + gridDims.width) % gridDims.width, position.y)
+    direction match {
+      case East()  => Point((position.x + 1) % gridDims.width, position.y)
+      case West()  => Point((position.x - 1 + gridDims.width) % gridDims.width, position.y)
       case North() => Point(position.x, (position.y - 1 + gridDims.height) % gridDims.height)
       case South() => Point(position.x, (position.y + 1) % gridDims.height)
     }
@@ -78,16 +128,16 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   private def appleGenerator(): Point = {
     entireGrid = gridDims.allPointsInside
     emptyCells = entireGrid.filterNot(p => snakeBody.contains(p)).toList
-    if (emptyCells.nonEmpty) { //Applies when there are available free cells
+    if (emptyCells.nonEmpty) {
       val randomIndex = random.randomInt(emptyCells.length)
       emptyCells(randomIndex)
-    } else { //Applies when there is no place for the apple to spawn
+    } else {
       Point(-1, -1)
     }
   }
 
   private def collisionDetector(): Boolean = {
-    if (snakeBody.tail.contains(headPosition)) { // The tail method checks if every element except the head contains the head, which would mean a collision of the snake with itself
+    if (snakeBody.tail.contains(headPosition)) {
       return true
     }
     false
@@ -96,12 +146,12 @@ class GameLogic(val random: RandomGenerator, val gridDims: Dimensions) {
   def getCellType(p: Point): CellType = {
     if (headPosition == p) {
       SnakeHead(currentDirection)
-    } else if (applePosition == p) { // Needed to check (&& emptyCells.nonEmpty) before, no longer necessary since it is integrated in the appleGenerator()
+    } else if (applePosition == p) {
       Apple()
     } else if (snakeBody.contains(p)) {
       val snakeBodyIndex = snakeBody.indexOf(p)
       val colorIndex = snakeBodyIndex.toFloat / (snakeBody.length - 1)
-      SnakeBody(colorIndex) //Define color of snakeBody
+      SnakeBody(colorIndex)
     } else {
       Empty()
     }
@@ -113,4 +163,3 @@ object GameLogic {
   val DrawSizeFactor = 1.0
   val DefaultGridDims: Dimensions = Dimensions(width = 10, height = 10)
 }
-

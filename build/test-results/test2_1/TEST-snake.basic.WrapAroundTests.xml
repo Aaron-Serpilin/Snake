@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="snake.basic.WrapAroundTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-19T12:23:10" hostname="Jays-MacBook-Pro-2.local" time="0.04">
+<testsuite name="snake.basic.WrapAroundTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-21T13:17:28" hostname="Jays-MacBook-Pro-2.local" time="0.038">
   <properties/>
   <testcase name="testWrapAroundEast" classname="snake.basic.WrapAroundTests" time="0.006"/>
   <testcase name="testWrapAroundSouth" classname="snake.basic.WrapAroundTests" time="0.012"/>
   <testcase name="testWrapAroundNorth" classname="snake.basic.WrapAroundTests" time="0.009"/>
-  <testcase name="testWrapAroundWest" classname="snake.basic.WrapAroundTests" time="0.011"/>
+  <testcase name="testWrapAroundWest" classname="snake.basic.WrapAroundTests" time="0.009"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
